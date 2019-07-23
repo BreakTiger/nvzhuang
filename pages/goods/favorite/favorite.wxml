@@ -1,0 +1,19 @@
+<!--收藏列表页面-->
+<!--依赖：收藏项目列表-->
+<import src="/templates/goods/fav/goods-fav-template.wxml" />
+
+<view class="container" wx:if="{{init}}">
+  <!-- 调用模板 -->
+  <block wx:for="{{favorites}}" wx:key="goodsId">
+    <template is="goodsFavTemplate" data="{{...item}}" />
+  </block>
+
+  <!-- 列表中不存在内容时，显示的内容 -->
+  <!--占位提示-->
+  <view class="order-empty-tips" wx:if="{{init && favorites.length == 0}}">
+    <image src="/images/icons/order-empty.png" />
+    <text>您还没有收藏商品</text>
+  </view>
+
+
+</view>

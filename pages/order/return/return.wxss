@@ -1,0 +1,332 @@
+page {
+  background-color: #f7f6f2;
+}
+
+/* 整体盒子 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 颜色框 */
+
+.BKC {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #f5cb65;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+/* 退货的物品信息栏 */
+
+/* 容器  */
+
+.return-info-box {
+  width: 702rpx;
+  height: 1097rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: -95rpx;
+}
+
+/* 头部信息简介栏  */
+
+.header-info-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #f5f5f5;
+  padding-bottom: 25rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 30rpx;
+}
+
+/* 图片  */
+
+.header-img {
+  width: 181rpx;
+  height: 197rpx;
+  margin-right: 25rpx;
+}
+
+.header-img image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 信息简介 */
+
+.info-container {
+  width: 450rpx;
+  height: 195rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 商品名称 */
+
+.name {
+  font-size: 30rpx;
+  color: #666;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 35rpx;
+}
+
+/* 规格 */
+
+.color-sku {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 35rpx;
+}
+
+/* 颜色 */
+
+.color {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 180rpx;
+}
+
+/* 尺码 */
+
+.sku {
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* 价格数量 */
+
+.price-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 价格 */
+
+.price {
+  font-size: 28rpx;
+  color: #ef9ba8;
+  margin-right: 312rpx;
+}
+
+/* 数量 */
+
+.number {
+  font-size: 28rpx;
+  color: #ef9ba8;
+}
+
+/* 删除图标 */
+.header-icon{
+  width: 30rpx;
+  height: 29rpx;
+  margin-top: -160rpx;
+}
+
+
+/* 退货理由 */
+
+.reason-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.reason-box text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* 请选择 */
+
+.reason-box .choice {
+  color: #ef9ba8;
+}
+
+/* 图片 */
+
+.right-icon {
+  width: 10rpx;
+  height: 19rpx;
+  margin-left: 15rpx;
+}
+
+.title {
+  margin-right: 410rpx;
+}
+
+/* 退款说明 */
+
+.explain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #f5f5f5;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  margin-left: 20rpx;
+}
+
+.explain text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.explain .scend-text {
+  font-size: 22rpx;
+  color: #bcbcbc;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+/* 上传图片 */
+
+.uploading-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+
+.uploading-text {
+  margin-bottom: 60rpx;
+}
+
+.uploading-text text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.uploading-text .small-text {
+  font-size: 22rpx;
+  color: #bcbcbc;
+  margin-left: 10rpx;
+}
+
+/* 图片背景框 */
+
+.img-box {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  background-color: #f7f6f2;
+  margin-left: 35rpx;
+}
+
+/* 图片 */
+
+.uploading-img {
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+/* 按钮容器 */
+
+.uploading-btn-box {
+  margin-top: 65rpx;
+}
+
+/* 按钮样式 */
+
+.uploading-btn {
+  width: 425rpx;
+  height: 60rpx;
+  color: #fff;
+  background-color: #ef9ba8;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+}
+
+/* 协议 */
+
+.protocol-box {
+  margin-top: 10rpx;
+  padding-left: 105rpx;
+}
+
+/* 文字调整 */
+
+.protocol-box text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.protocol-box .protocol {
+  margin-left: 10rpx;
+  color: #ef9ba8;
+}
+
+/*弹窗  */
+
+/* 背景框 */
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* 面板 */
+
+.bg-alert {
+  width: 560rpx;
+  height: 425rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 320rpx auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 面板内文字大小 */
+.bg-alert .choice{
+  font-size: 30rpx;
+  color: #333333;
+  height: 85rpx;
+  line-height: 85rpx;
+}
+
+/* 图标 */
+.btn{
+  width: 28rpx;
+  height: 28rpx;
+  border: none;
+}
+
+.btn image{
+  width: 100%;
+  height: 100%;
+}
+
+.choice_text{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.show-alert{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

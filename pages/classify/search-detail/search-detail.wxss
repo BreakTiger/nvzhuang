@@ -1,0 +1,114 @@
+/* 整体盒子  */
+@import "/templates/loadmore/index.wxss";
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部 */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15rpx;
+  margin-bottom: 25rpx;
+  margin-left: 15rpx;
+}
+
+/* 搜索框盒子：图片加输入框 */
+
+.search_box {
+  width: 588rpx;
+  height: 55rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f7f6f2;
+  border-radius: 20rpx;
+}
+
+/* 图片 */
+
+.icon {
+  width: 33rpx;
+  height: 33rpx;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.icon image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 输入框 */
+
+input {
+  width: 470rpx;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+
+/* 搜索按钮 */
+
+.s_btn {
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 18rpx;
+  line-height: 25px;
+  width: 60px;
+}
+
+/* 商品列表 */
+
+.list_box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 44rpx;
+}
+
+/* 商品容器 */
+
+.product_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 24rpx;
+  margin-bottom: 49rpx;
+}
+
+/* 图片 */
+
+.imgsrc {
+  width: 320rpx;
+  height: 426rpx;
+  border-radius: 10rpx;
+}
+
+.imgsrc image {
+  width: 100%;
+  height: 100%;
+}
+
+.name {
+  width: 201rpx;
+  height: 35rpx;
+  text-align: center;
+  color: #666;
+  margin-top: 22rpx;
+  margin-bottom: 22rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 30rpx;
+  color: #ef9ba8;
+}
+
+.goods-empty-tips {
+  margin-top: 100rpx;
+}

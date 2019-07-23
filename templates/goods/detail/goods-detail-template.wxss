@@ -1,0 +1,43 @@
+/* 盒子 */
+.goods-detail-container{
+    background-color: #FFF;
+    margin-top: 135rpx;
+}
+
+/* 标题 */
+.goods-detail-title{
+    height: 75rpx;
+    text-align: center;
+}
+
+/* 文字设定 */
+.goods-detail-title text{
+  line-height: 75rpx;
+  font-size: 35rpx;
+  color: #ef9ba8;
+}
+
+.title{
+  margin-left: 40rpx;
+  margin-right: 40rpx; 
+}
+
+
+/* 商品详情图片 */
+.goods-detail-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.listimg{
+  width: 750rpx;
+  height: 600rpx;
+  margin-bottom: 10rpx;
+}
+
+.listimg image{
+  width: 100%;
+  height: 100%;
+}
+
+

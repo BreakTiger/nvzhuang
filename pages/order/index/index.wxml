@@ -1,0 +1,27 @@
+<!--订单页面 -->
+<!--依赖：订单列表，订单商品（间接），订单项目（间接）-->
+<import src="/templates/order/list/order-list-template.wxml" />
+<import src="/templates/order/tab/order-tab-template.wxml" />
+
+<view class="order-index-container" wx:if="{{init}}">
+
+  <!--顶部导航栏-->
+  <view class="order-tab-wrap">
+    <template is="orderTabTemplate" data="{{...tabbar}}" />
+  </view>
+
+  <!-- 无内时显示的内容： -->
+  <!--占位提示-->
+  <view class="order-empty-tips" wx:if="{{orders.length == 0}}">
+    <image src="/images/icons/order-empty.png" />
+    <text>您还没有相关订单</text>
+  </view>
+
+  <!--订单列表页面-->
+  <view class="order-list-wrap" wx:else>
+    <template is="orderListTemplate" data="{{orders, loading, nomore}}" />
+  </view>
+
+  <!--底部边线-->
+  <view class="footer-line"></view>
+</view>

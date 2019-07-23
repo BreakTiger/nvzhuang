@@ -1,0 +1,110 @@
+<!-- 退货申请 -->
+
+<!-- 整体盒子 -->
+<view class='container'>
+
+  <!-- 颜色框 -->
+  <view class='BKC'></view>
+
+  <!-- 退货的物品信息栏 -->
+  <view class='return-info-box'>
+    <!-- 头部信息简介栏 -->
+    <view class='header-info-box' wx:for="{{datalist.orderGoodsList}}">
+      <!-- 图片 -->
+      <view class='header-img'>
+        <image src='{{item.goods_image}}'></image>
+      </view>
+      <!-- 信息简介 -->
+      <view class='info-container'>
+        <!-- 商品名称 -->
+        <text class='name'>{{item.goods_name}}</text>
+        <!-- 规格  -->
+        <view class='color-sku' wx:for="{{item.goods_spec}}" wx:for-item="spec">
+          <text class='sku'>{{spec}}</text>
+        </view>
+        <!-- 价格数量 -->
+        <view class='price-number'>
+          <text class='price'>￥{{item.goods_price}}</text>
+          <text class='number'>X{{item.goods_num}}</text>
+        </view>
+      </view>
+      <!-- 图标 -->
+    </view>
+
+    <form>
+
+      <!-- 退货缘由 -->
+      <view class='reason-box'>
+        <text class='title'>退货缘由:</text>
+        <view bindtap='goAlert'>
+          <view wx:if='{{switch==0}}'>
+            <text class='choice'>请选择</text>
+            <!-- 图片 -->
+            <image src='/images/mine/退货申请页面的箭头@2x.png' class='right-icon'></image>
+          </view>
+          <view wx:if='{{switch==1}}' class='choice_text'>{{value}}</view>
+        </view>
+
+      </view>
+
+      <!-- 退货说明 -->
+      <view class='explain'>
+        <text>退货说明</text>
+        <text class='scend-text'>(选项)</text>
+        <!-- 输入框 -->
+        <input></input>
+      </view>
+
+      <!-- 上传图片 -->
+
+      <view class='uploading-box'>
+        <view class='uploading-text'>
+          <text>上传退货的快递单</text>
+          <text class='small-text'>(请上传清晰的图片以便查看)</text>
+        </view>
+        <!-- 添加图标 -->
+        <view class='img-box'>
+          <image src='/images/mine/加号@2x.png' class='uploading-img'></image>
+        </view>
+      </view>
+
+      <!-- 提交按钮 -->
+      <view class='uploading-btn-box'>
+        <button class='uploading-btn'>提交</button>
+      </view>
+    </form>
+
+
+    <!-- 协议 -->
+    <view class='protocol-box'>
+      <text>点击提交即表示您已同意</text>
+      <text class='protocol'>退货退款协议</text>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- 弹框 -->
+
+<view class='bg' wx:if="{{alert==1}}">
+
+  <!-- 面板 -->
+  <view class='bg-alert'>
+
+    <!-- 内容 -->
+
+    <!-- 图标+文字 -->
+    <view wx:for="{{alertLlist}}" data-index='{{index}}' class=" {{selected==index?'show-alert':'hidden-alert'}}" bindtap='selected' data-item='{{item}}'>
+
+      <!-- 图标 -->
+      <view wx:if='{{index==selected}}' class='btn'>
+        <image src='/images/mine/默认 icon@2x.png'></image>
+      </view>
+
+      <!-- 理由 -->
+      <text class='choice'>{{item}}</text>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--商品详情模板-->
+<!--输入：...details-->
+<!--依赖：无-->
+<!-- 假数据宝：Info -->
+
+<template name="goodsDetailTemplate">
+
+  <view class="goods-detail-container" wx:if="{{details.length > 0}}">
+
+
+    <!--详情标题-->
+    <view class='goods-detail-title'>
+      <text>——</text>
+      <text class='title'>商品详情</text>
+      <text>——</text>
+    </view>
+    <!-- 间隔线 -->
+    <view class="hr-light"></view>
+
+    <!--详情类列表区域/遍历详情-->
+    <!-- <view class="goods-detail-list">
+      <block wx:for="{{Infoimg}}" wx:key="id">
+        <view class='listimg'>
+          <image src='{{item.url}}'></image>
+        </view>
+      </block>
+    </view> -->
+    <view class="goods-detail-list">
+      <block wx:for="{{details}}" wx:key="unique">
+        <!--文本-->
+        <!-- <text wx:if="{{item.type == 1}}">{{item.content}}</text> -->
+        <!--图片-->
+        <view class='listimg'>
+          <image src="{{item}}" mode="widthFix" catchtap="previewDetails" data-url="{{item}}" />
+        </view>
+        
+      </block>
+    </view>
+
+  </view>
+</template>

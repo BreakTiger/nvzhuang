@@ -1,0 +1,151 @@
+<!--用户信息页面-->
+<!--依赖：无-->
+<view class="user-conatiner">
+
+  <!-- 顶部背景框 -->
+  <view class='header-BKC'></view>
+  <!-- 头图区域 -->
+  <view class="user-info-container">
+    <!-- 头像 -->
+    <view class='user-avatar'>
+      <image src="{{userInfo.avatar}}" />
+    </view>
+    <!-- 用户名+签名 -->
+    <view class='user-info'>
+      <text class="user-nickname">{{userInfo.nickname}}</text>
+      <text class='user-signature'></text>
+    </view>
+  </view>
+
+  <!-- 可轮动的导航条 -->
+  <!-- 容器 -->
+  <view class='zan-pannel'>
+
+    <!-- 全部订单 -->
+
+    <navigator class='all-oders_box' url='/pages/order/index/index'>
+      <!-- 文字 -->
+      <text class='titles'>全部订单</text>
+      <!-- 图标 -->
+      <view class='right_icon'>
+        <image src='/images/mine/right@2x.png'></image>
+      </view>
+    </navigator>
+
+    <!-- 横向导航列表 -->
+    <view class='navlist'>
+      <!-- 代付款 -->
+      <navigator class='nav-box' url='/pages/order/index/index'>
+        <!-- 图片 -->
+        <view class='nav-pay'>
+          <image src='/images/mine/wait-pay-icon@2x.png'></image>
+        </view>
+        <!-- 文字 -->
+        <text class='nav-text'>待付款</text>
+      </navigator>
+
+      <!-- 代发货 -->
+      <navigator class='nav-box' url='/pages/order/index/index'>
+        <!-- 图片 -->
+        <view class='nav-sent'>
+          <image src='/images/mine/wait-shipping-icon@2x.png'></image>
+        </view>
+        <!-- 文字 -->
+        <text class='nav-text'>待发货</text>
+      </navigator>
+
+
+      <!-- 待收货 -->
+      <navigator class='nav-box' url='/pages/order/index/index'>
+        <!-- 图片 -->
+        <view class='nav-take'>
+          <image src='/images/mine/wait-receive-icon@2x.png'></image>
+        </view>
+        <!-- 文字 -->
+        <text class='nav-text'>待收货</text>
+      </navigator>
+
+      <!-- 全部订单  -->
+      <navigator class='nav-box' url='/pages/order/index/index'>
+        <!-- 图片 -->
+        <view class='nav-oder'>
+          <image src='/images/mine/all-icon@2x.png'></image>
+        </view>
+        <!-- 文字 -->
+        <text class='nav-text'>全部订单</text>
+      </navigator>
+
+    </view>
+
+
+
+
+
+  </view>
+
+
+  <!-- 综合内容栏 -->
+  <view class="zan-panel">
+
+    <navigator class="zan-cell zan-cell--access" url="/pages/order/return-detail/return-detail">
+      <view class="zan-cell__bd">
+        <text>退款退货</text>
+      </view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+
+    <navigator class="zan-cell zan-cell--access" url="/pages/address/index/index">
+      <view class="zan-cell__bd">
+        <text>收货地址</text>
+      </view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+    <navigator class="zan-cell zan-cell--access" url="/pages/goods/favorite/favorite">
+      <view class="zan-cell__bd">
+        <text>我的收藏</text>
+      </view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+
+    <navigator class="zan-cell zan-cell--access" url="/pages/coupon/index/index">
+      <view class="zan-cell__bd">
+        <text>我的红包</text>
+      </view>
+      <view class="zan-cell__ft"></view>
+    </navigator>
+
+    <!-- <button class="zan-cell zan-cell--access" open-type='contact'>
+      <view class="zan-cell__bd">
+        <text>联系客服</text>
+      </view>
+      <view class="zan-cell__ft">
+      </view>
+    </button> -->
+  </view>
+
+
+
+
+
+
+  <!--<view class="zan-panel">
+        <view class="zan-cell zan-cell--access" catchtap="tips">
+            <view class="zan-cell__bd">
+                <image src="/images/icons/cooperate.png" />
+                <text>联系客服</text>
+            </view>
+            <view class="zan-cell__ft">
+            </view>
+        </view>
+        <view class="zan-cell zan-cell--access" catchtap="tips">
+            <view class="zan-cell__bd">
+                <image src="/images/icons/gift.png" />
+                <text>推荐有奖</text>
+            </view>
+            <view class="zan-cell__ft"></view>
+        </view>
+    </view>-->
+  <!--底部边线-->
+  <view class="footer-line"></view>
+
+</view>

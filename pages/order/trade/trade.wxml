@@ -1,0 +1,107 @@
+<!--订单交易页面-->
+<!--依赖：地址项目页面、订单项目页面-->
+<import src="/templates/address/item/address-item-template.wxml" />
+<import src="/templates/trade/item/order-item-template.wxml" />
+
+
+<!-- 整体盒子 -->
+<view class="container" wx:if="{{init}}">
+  <!-- 颜色框 -->
+  <view class='BCV'></view>
+  <!-- 收货地址+商品简介 -->
+  <!-- 容器  垂直排布的-->
+  <view class='box1'>
+    <!-- 收货地址的模版 排布 -->
+    <!-- 样式已写在模版的wxss中 -->
+    <template is="addressItemTemplate" data="{{...address}}" />
+    <!-- 店铺信息 -->
+    <view class='shopinfo'>
+      <!-- 图标 -->
+      <view class='shop-icon'>
+        <image src='/images/car/circle-icon@2x.png'></image>
+      </view>
+      <!-- 店铺名 -->
+      <text class='shop-name'>{{shop_name}}</text>
+    </view>
+    <!-- 购买的商品内容 -->
+    <!-- 数据源：来自购物车 -->
+    <!-- 定义渲染列表模版 -->
+    <view class='list_box'>
+
+      <view class='message' wx:for="{{trade.orderGoodsList}}" wx:key="unique">
+        <!-- 图片 -->
+        <view class='message_img'>
+          <image src='{{item.goods_image}}'></image>
+        </view>
+        <!-- 名字+规格+颜色+价格 -->
+        <view class='name-color-sku'>
+          <!-- 名字 -->
+          <view class='name'>
+            <text>{{item.goods_name}}</text>
+          </view>
+          <!-- 颜色规格 -->
+          <view class='color-sku'>
+            <!-- 颜色 -->
+            <view class='color' wx:for="{{item.goods_spec}}" wx:for-item="spec" wx:key="unique">
+              <text>{{spec}}</text>
+            </view>
+          </view>
+          <!-- 价格 -->
+          <text class='price'>￥{{item.goods_price}}</text>
+        </view>
+        <!-- 数量 -->
+        <text class='numbers'>X{{item.goods_num}}</text>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 支付配送+优惠券+金额+运费 -->
+  <view class='box2'>
+    <!-- 支付配送 -->
+    <view class="zan-cell {{address ? 'zan-cell--access': ''}}" catchtap="onPostFeeTap">
+      <text class="zan-cell__bd">支付配送</text>
+
+      <text class="zan-cell__ft" wx:if="{{address && seletedDelilvery}}">{{seletedDelilvery.express_name}} {{seletedDelilvery.fee != 0 ? ' +￥' + seletedDelilvery.fee : '免邮' }} </text>
+      <text class="zan-cell__ft" wx:else>请选择收货地址</text>
+    </view>
+    <!-- 优惠券 -->
+    <view class="zan-cell {{coupons.length>0 ? 'zan-cell--access': ''}}" catchtap="onCouponTap">
+      <view class="zan-cell__bd zan-cell__flex">优惠券
+        <span class="coupon-tips" wx:if="{{coupons.length > 0}}">{{selectedCoupon ? '已选择' : coupons.length + '张可用'}}</span>
+      </view>
+      <text class="zan-cell__ft">{{coupons.length>0 ? ( selectedCoupon ? '-￥' + selectedCoupon.amount : '未使用') : '无可用'}}</text>
+    </view>
+    <!-- 商品金额 -->
+    <view class="summary-line-container">
+      <text class="summary-title">商品金额</text>
+      <text class="summary-text">￥{{trade.dealPrice}}</text>
+    </view>
+    <!-- 运费 -->
+    <view class="summary-line-container" wx:if="{{seletedDelilvery}}">
+      <text class="summary-title">运费</text>
+      <text class="summary-text">￥{{trade.postFee}}</text>
+    </view>
+  </view>
+
+
+  <!-- 支付方式 -->
+  <view class='box3'>
+    <view class="zan-cell {{address ? 'zan-cell--access': ''}}">
+      <text class="pay_title1">支付方式</text>
+      <text class="pay_title2">{{trade.paymentText}}</text>
+    </view>
+  </view>
+
+
+  <!--购买栏-->
+  <view class="tarde-action-bar">
+    <view class='tarde-text'>
+      <text class="tarde-total-text">实付款：</text>
+      <text class="tarde-total-price">￥{{trade.finalPrice}}</text>
+    </view>
+    <view class="trade-confirm-button {{seletedDelilvery ? '' : 'trade-confirm-disable'}}" catchtap="onConfirmTap">
+      <text class='pay-btn'>立即支付</text>
+    </view>
+  </view>
+</view>

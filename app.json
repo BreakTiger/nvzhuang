@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/shopInfo/shopInfo",
+    "pages/classify/index",
+    "pages/goods/index/index",
+    "pages/classify/search/search",
+    "pages/classify/search-detail/search-detail",
+    "pages/cart/index",
+    "pages/customer/index",
+    "pages/order/index/index",
+    "pages/order/detail/detail",
+    "pages/order/return/return",
+    "pages/address/index/index",
+    "pages/address/edit/edit",
+    "pages/goods/favorite/favorite",
+    "pages/coupon/index/index",
+    "pages/order/trade/trade",
+    "pages/customer/login/login",
+    "pages/order/return-detail/return-detail",
+    "pages/order/return-goods/return-goods",
+    "pages/refund/apply/apply"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f5cf72",
+    "navigationBarTitleText": "中纺时尚女装",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#B0B0B0",
+    "selectedColor": "#f5cb64",
+    "list": [
+      {
+        "iconPath": "images/tabbar/home-icon-1.png",
+        "selectedIconPath": "images/tabbar/home-icon-2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/tabbar/shop-icon-1.png",
+        "selectedIconPath": "images/tabbar/shop-icon-2.png",
+        "pagePath": "pages/classify/index",
+        "text": "商城"
+      },
+      {
+        "iconPath": "images/tabbar/cart-icon-1.png",
+        "selectedIconPath": "images/tabbar/cart-icon-2.png",
+        "pagePath": "pages/cart/index",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "images/tabbar/me-icon-1.png",
+        "selectedIconPath": "images/tabbar/me-icon-2.png",
+        "pagePath": "pages/customer/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

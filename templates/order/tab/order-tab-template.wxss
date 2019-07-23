@@ -1,0 +1,33 @@
+.order-tab-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 85rpx;
+    background-color: #FFF;
+    margin-bottom: 10rpx;
+    z-index: 10000;
+}
+
+.order-tab-item{
+    flex-grow: 1;
+    height: 100%;
+    text-align: center;
+    border-bottom: solid 3px #FAFAFA;
+}
+
+
+.order-tab-item text{
+    font-size: 30rpx;
+    line-height: 85rpx;
+    color: #4B515C;
+}
+
+
+.order-tab-item.active{
+    border-bottom-color: #ef9ba8;
+}
+
+/* .order-tab-item.active text{
+    color: #ef9ba8;
+} */

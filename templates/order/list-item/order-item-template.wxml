@@ -1,0 +1,69 @@
+<!--订单项目模板 -->
+<!--依赖：订单商品-->
+<!--输入：...order-->
+<import src="/templates/order/goods/order-goods-template.wxml" />
+<template name="orderItemTemplate">
+  <view class="order-item-container" catchtap="onOrderTap" data-order-id="{{order_id}}">
+
+    <!--基本信息-->
+    <!-- 店铺信息：店名+状态 -->
+    <view class="order-header-container">
+      <view class="order-shop-info-container">
+        <image class="shop-info-icon" src="/images/car/circle-icon@2x.png" />
+        <text class="shop-info-name">{{store_name||''}}</text>
+        <!-- 状态 -->
+        <text class='shop_info-types'></text>
+      </view>
+      <text class="order-status-cancel" wx:if="{{order_status == 0}}">已取消</text>
+      <text class="order-status-complete" wx:if="{{order_status == 10}}">待支付</text>
+      <text class="order-status-complete" wx:if="{{order_status == 20}}">待发货</text>
+      <text class="order-status-complete" wx:if="{{order_status == 30}}">待收货</text>
+      <text class="order-status-complete" wx:if="{{order_status == 40}}">已完成</text>
+      <text class="order-status-complete" wx:if="{{order_status == 50}}">已退款</text>
+      <text class="order-status-complete" wx:if="{{order_status == 60}}">已退货</text>
+    </view>
+
+    <!--商品列表-->
+    <view class="order-goods-list-container" data-order-id="{{order_id}}" catchtap='onDetailTap'>
+      <block wx:for="{{orderGoodsList}}" wx:key="unique">
+        <template is="orderGoodsTemplate" data="{{...item}}" />
+        <view class="order-goods-hr" />
+      </block>
+    </view>
+
+    <!--汇总信息-->
+    <view class="order-footer-container">
+      <text class="footer-count">共{{orderGoodsList.length}}件</text>
+      <text>合计:</text>
+      <text class="footer-price">￥{{order_amount}}</text>
+      <!-- <text>(含运费￥{{postFee}})</text> -->
+    </view>
+
+    <!--操作栏-->
+    <!-- 根据状态选择相应的按钮操作栏 -->
+    <view class="order-action-bar">
+
+      <!--待付款-->
+      <block wx:if="{{order_status == 10}}">
+        <view class="zan-btn zan-btn--small" data-order-id="{{order_id}}" catchtap="onOrderClose">取消订单</view>
+        <view class="zan-btn zan-btn--small zan-btn--primary" data-order-id="{{order_id}}" catchtap="onWxPay">立即支付</view>
+      </block>
+
+
+      <!--发货-->
+      <block wx:if="{{order_status==20}}">
+        <view class="zan-btn zan-btn--small zan-btn--primary" data-order-id="{{order_id}}" catchtap="onOrderRefund">申请退款</view>
+      </block>
+
+      <!-- 收货 -->
+      <block wx:if="{{order_status == 30}}">
+        <view class="zan-btn zan-btn--small zan-btn--primary" data-order-id="{{order_id}}" catchtap="onOrderConfirm">确认收货</view>
+      </block>
+      <!--
+      <block wx:if="{{order_status == 40}}">
+        <view class="zan-btn zan-btn--small zan-btn--primary" data-order-id="{{order_id}}" catchtap="onOrderReturn">申请退货</view>
+      </block>
+      -->
+    </view>
+  </view>
+</template>

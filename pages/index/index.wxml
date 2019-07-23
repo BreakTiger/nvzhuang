@@ -1,0 +1,152 @@
+<!-- 导入模板 -->
+
+<!-- 首页 -->
+
+<!-- 首页盒子 -->
+<view class='container'>
+
+  <!-- 轮播图4张 -->
+  <swiper class='home-swiper' autoplay='true' bindchange='changDot' interval='4000'>
+    <!-- 设置自动播放，切换间隔时间-->
+    <swiper-item wx:for="{{home_img}}" wx:for-index="index" wx:key="unique">
+      <image src='{{item.image_url}}' data-path="{{item.path}}{{item.path_value}}" bindtap='onSlideTap'></image>
+    </swiper-item>
+
+  </swiper>
+
+  <!-- 轮播图光标 -->
+  <view class="dots">
+    <block wx:for="{{home_img}}" wx:key="unique">
+      <view class="dot {{index == swiperCurrent?'actives':''}}"></view>
+    </block>
+  </view>
+
+
+  <!-- 店铺店标和宝贝数量显示栏 -->
+  <!-- 盒子 -->
+  <view class='home-shop' catchtap='onshopInfoTap'>
+
+    <!-- 商品。数量行 -->
+    <view class='good-number-line'>
+      <!-- 商品 -->
+      <view class='goods1'>
+        <text>商品</text>
+        <text class='number'>{{shop.goods_num}}</text>
+      </view>
+
+      <!-- 数量 -->
+      <view class='goods2'>
+        <text>销量</text>
+        <text class='number'>{{shop.salenum}}</text>
+      </view>
+    </view>
+
+
+
+    <!-- 店标 + 店名-->
+    <view class='shop-banner-name'>
+      <!-- 店标图片 -->
+      <view class='shop-banner'>
+        <image src='{{shop.store_logo}}'></image>
+      </view>
+      <!-- 店名 -->
+      <text class='shop-name'>{{shop.store_name}}</text>
+    </view>
+
+  </view>
+
+  <!-- 新品推荐 -->
+  <view class='new_products'>
+    <!-- 标题 -->
+    <view class='products-title'>
+      <view class='port'></view>
+      <text class='title1'>新品推荐</text>
+      <text class='title2'>NEW</text>
+    </view>
+
+    <!-- 内容 -->
+    <!-- 盒子 -->
+    <view class='content_box'>
+
+      <block wx:for="{{goods_new_list}}" wx:for-item="item" wx:key="unique">
+
+        <view class='products_content' data-id="{{item.id}}" catchtap='onGoodsItemTap'>
+          <view class='content_img'>
+            <image src='{{item.goods_image}}'></image>
+          </view>
+          <text class='produc_name'>{{item.goods_name}}</text>
+          <text class='price'>{{item.price}}</text>
+        </view>
+
+      </block>
+    </view>
+  </view>
+
+  <!-- 爆款推荐 -->
+  <view class='hot_products'>
+    <!-- 标题 -->
+    <view class='products-title'>
+      <view class='port'></view>
+      <text class='title1'>爆款推荐</text>
+      <text class='title2'>HOT</text>
+    </view>
+
+    <!-- 盒子 -->
+    <view class='content_box'>
+      <block wx:for="{{goods_hot_list}}" wx:for-item="item" wx:key="unique">
+        <view class='products_content' data-id="{{item.id}}" catchtap='onGoodsItemTap'>
+          <view class='content_img'>
+            <image src='{{item.goods_image}}'></image>
+          </view>
+          <text class='produc_name'>{{item.goods_name}}</text>
+          <text class='price'>{{item.price}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+  <!-- 固定图标 -->
+  <view class='icon_box'>
+    <!-- 红包 -->
+    <!-- 进入优惠券页面 -->
+    <view class='hongbao' bindtap="goAlert" wx:if="{{coupon}}">
+      <image src='/images/home/hongbao@2x.png'></image>
+    </view>
+    <!-- 客服 -->
+    <!-- 拨打电话的功能 -->
+    <view class='kefu' bindtap='onKefuTap'>
+      <image src='/images/home/kefu@2x.png'></image>
+    </view>
+
+  </view>
+
+</view>
+
+<!-- 弹框 -->
+<!-- 容器 -->
+<view class='bg' wx:if="{{alert==1}}">
+  <!-- 图片 -->
+  <view class='bg-alert' class="show-alert">
+    <!-- 优惠券 -->
+    <image class='youhui' src='/images/home/coupon-bg@2x.png'></image>
+    <!-- 关闭按钮 -->
+    <image class='close' src='/images/home/close-icon@2x.png' bindtap='onPanelClose'></image>
+
+    <!-- 优惠券信息 -->
+  <view class='price-box'>
+    <text class='price'>{{coupon.amount}}</text>
+    <text>￥</text>
+  </view>
+
+  <!-- 条件 -->
+  <view class='condition-box'>
+    <text class='line1'>{{coupon.title}}</text>
+    <text class='line1' wx:if="{{coupon.minimum_amount>0}}">满{{coupon.minimum_amount}}可用现金券</text>
+    <text class='line1' wx:else>无最低消费限制</text>
+  </view>
+
+  <!-- 按钮 -->
+  <button class='bg-btn' data-id="{{coupon.id}}" bindtap='pickCoupon'>立即领取</button>
+  </view>
+</view>

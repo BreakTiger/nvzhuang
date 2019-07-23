@@ -1,0 +1,23 @@
+<!--店铺信息模板-->
+<!--依赖模板：无-->
+<!--输入参数：...shop -->
+<template name="shopInfoTemplate">
+    <view class="zan-panel ">
+        <view class="zan-cell zan-cell--access" catchtap="onPhoneCall">
+            <view class="zan-cell__bd">联系方式</view>
+            <view class="zan-cell__ft">{{phone}}</view>
+        </view>
+        <view class="zan-cell {{map ? 'zan-cell--access' : ''}} " catchtap="onOpenLocation">
+            <view class="zan-cell__bd address-label">详细地址</view>
+            <view class="zan-cell__ft">{{address}}</view>
+        </view>
+        <view class="zan-cell">
+            <view class="zan-cell__bd">店铺分类</view>
+            <view class="zan-cell__ft">{{categoryName}}</view>
+        </view>
+        <view class="zan-cell">
+            <view class="zan-cell__bd">店铺说明</view>
+            <view class="zan-cell__ft">{{describe}}</view>
+        </view>
+    </view>
+</template>

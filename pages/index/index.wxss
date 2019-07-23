@@ -1,0 +1,367 @@
+/* 首页盒子 */
+
+.container {
+  width: 750rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f2;
+}
+
+/* 轮播图图片尺寸 */
+
+.home-swiper {
+  width: 750rpx;
+  height: 605rpx;
+}
+
+.home-swiper image {
+  width: 750rpx;
+  height: 605rpx;
+}
+
+/* 轮播图指示点 */
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 410rpx;
+  right: 70rpx;
+  width: 200rpx;
+  height: 50rpx;
+}
+
+.dots .dot {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #333;
+  margin-left: 12rpx;
+  border-radius: 20rpx;
+  /* transform: all 0.6; */
+  opacity: 0.44;
+}
+
+/* 调用的css效果 */
+
+.dots .actives {
+  background-color: #333;
+  opacity: 1;
+}
+
+/*店标盒子:店铺货物数量*/
+
+.home-shop {
+  width: 710rpx;
+  height: 218rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.15);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+  position: absolute;
+  top: 460rpx;
+  align-items: center;
+}
+
+/* 店铺货物数量：间距大小，颜色，文字大小 */
+
+/* 整体间距 */
+
+.good-number-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 56rpx;
+  padding-top: 110rpx;
+}
+
+.goods1 {
+  /* margin-left: 129rpx;
+  margin-right: 250rpx;
+  margin-top: 116rpx; */
+  margin-left: 139rpx;
+  margin-right: 161rpx;
+}
+
+.goods2 {
+  /* margin-top: 116rpx; */
+  margin-right: 129rpx;
+}
+
+/* 文字颜色，大小 */
+
+.goods1 text {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.goods2 text {
+  font-size: 30rpx;
+  color: #666;
+}
+
+/* 间距 */
+
+.number {
+  margin-left: 20rpx;
+}
+
+/* 盒子：店标+点名 */
+
+.shop-banner-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -86rpx;
+  left: 200rpx;
+}
+
+/* 店标 */
+
+.shop-banner {
+  width: 151rpx;
+  height: 144rpx;
+}
+
+.shop-banner image {
+  width: 142rpx;
+  height: 142rpx;
+  border-radius: 50%;
+}
+
+/* 店名 */
+
+.shop-name {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 新品推荐 */
+
+.new_products {
+  width: 710rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.15);
+  margin-top: 105rpx;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29rpx;
+}
+
+/* 标题 */
+
+.products-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+  margin-left: 20rpx;
+}
+
+/* 标题内容 */
+
+.port {
+  width: 16rpx;
+  height: 50rpx;
+  background-color: #fadd98;
+  border-radius: 3px;
+  margin-right: 28rpx;
+}
+
+/* 文字样式 */
+
+.title1 {
+  font-size: 29rpx;
+  font-weight: bold;
+  margin-right: 28rpx;
+}
+
+.title2 {
+  font-size: 25rpx;
+  font-weight: bold;
+}
+
+/* 内容 */
+
+/* 盒子 */
+
+.content_box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 710rpx;
+}
+
+.products_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-bottom: 54rpx;
+}
+
+/* 商品图片 */
+
+.content_img {
+  width: 211rpx;
+  height: 288rpx;
+}
+
+.content_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+/* 文字 */
+
+.produc_name {
+  width: 211rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hot_products {
+  width: 710rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.15);
+  margin-bottom: 19rpx;
+}
+
+/* 红包,客服-盒子 */
+
+.icon_box {
+  position: fixed;
+  right: 20rpx;
+  top: 770rpx;
+}
+
+/* 红包 */
+
+.hongbao {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 20rpx;
+}
+
+.hongbao image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 客服 */
+
+.kefu {
+  width: 90rpx;
+  height: 90rpx;
+  padding: 0px;
+  border-radius: 45rpx;
+  border: none;
+}
+
+.kefu image {
+  width: 100%;
+  height: 100%;
+}
+
+/*弹窗  */
+
+/* 黑色背景层 */
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* 图片 */
+
+/* 优惠券 */
+.youhui {
+  width: 702rpx;
+  height: 421rpx;
+}
+
+/* 关闭按钮 */
+.close {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 46rpx;
+  top: 272rpx;
+}
+
+/* 显示 */
+.show-alert {
+  text-align: center;
+  margin-top: 250rpx;
+}
+
+/* 金额 */
+.price-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 292rpx;
+  right: 220rpx;
+}
+
+.price-box text{
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.price{
+  font-size: 36rpx;
+  margin-bottom: 25rpx;
+}
+
+/* 使用条件 */
+.condition-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  position: relative;
+  bottom: 394rpx;
+  left: 75rpx;
+}
+
+.condition-box text{
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.line1{
+  margin-bottom: 13rpx;
+}
+
+
+/* 按钮 */
+.bg-btn{
+  font-size: 28rpx;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: none;
+  border: 1rpx solid #fff;
+  color: #fff;
+  border-radius: 10rpx;
+  position: relative;
+  bottom: 292rpx;
+}
+
+
+

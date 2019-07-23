@@ -1,0 +1,99 @@
+ @import "/templates/tab/index.wxss";
+@import "/templates/goods/grid/goods-grid-template.wxss";
+/* page{
+    height: 100%;
+    background-color: #F5F5F5;
+}  */
+.ify-container{
+  background-color: #f7f6f2;
+}
+/*搜索框*/
+.ify_search{
+  width: 663rpx;
+  height: 55rpx;
+  background-color: #f7f6f2;
+  border-radius: 20rpx;
+  text-align: center;
+  margin: 20rpx auto;
+}
+.search-txt{
+  color: #666666;
+  opacity: 0.5;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+/*间隔线*/
+.ify_underline{
+  width: 100%;
+  height: 20rpx;
+  background-color: #f7f6f2;
+}
+
+/*tab框切换*/
+.nav_tab{
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+}
+.show{
+  line-height:100rpx;
+  text-align:center;
+  flex:1;
+  color:#333333;
+  font-size:28rpx;
+  opacity: 0.5;
+}
+.hidden{
+  line-height:100rpx;
+  text-align:center;
+  color:#ef9ba8;
+  flex:1;
+  font-size:28rpx;
+}
+.nav_underline{
+  background:#ef9ba8;
+  width:54rpx;
+  height:6rpx;
+  margin-top:-10rpx;
+  margin-left:70rpx;
+  border-radius:8rpx;
+}
+/*上衣内容*/
+.clothes_row{
+  width: 100%;
+  height: auto;
+  margin-top: 29rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;    
+}
+.cl-s0{
+  text-align: center;
+  margin-top: 20rpx;
+}
+.cl-s0-img{
+  width: 300rpx;
+  height: 429rpx;
+  margin-bottom:15rpx;
+}
+.cl-s0-img image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.cl-text{
+  margin-top:20rpx;
+  color:#333333;
+  font-size:28rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  width:248rpx;
+  margin:0 auto;
+}
+.cl-price{
+  font-size: 30rpx;
+  color: #ef9ba8;
+  margin-top: 20rpx;
+}

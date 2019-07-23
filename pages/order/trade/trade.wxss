@@ -1,0 +1,361 @@
+@import "/templates/address/item/address-item-template.wxss";
+@import "/templates/trade/item/order-item-template.wxss";
+
+/* 整个页面 */
+
+page {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+/* 整体容器 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150rpx;
+}
+
+/* 颜色框 */
+
+.BCV {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #f5cf72;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+/* 容器： 收货地址+商品简介 */
+
+.box1 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -78rpx;
+}
+
+/* 店铺信息 */
+
+/* 盒子 */
+
+.shopinfo {
+  width: 660rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #E3E3E3;
+}
+
+/* 图标 */
+
+.shop-icon {
+  width: 27rpx;
+  height: 27rpx;
+  margin-bottom: 25rpx;
+  margin-left: 5rpx;
+  margin-right: 20rpx;
+}
+
+.shop-icon image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 购物车的内容 */
+
+.list_box {
+  width: 660rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20rpx;
+}
+
+.message {
+  width: 660rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+/* 图片 */
+
+.message_img {
+  width: 181rpx;
+  height: 197rpx;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+
+.message_img image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 容器 */
+
+.name-color-sku {
+  width: 420rpx;
+  height: 200rpx;
+}
+
+/* 商品名 */
+
+.name {
+  width: 275rpx;
+  height: 45rpx;
+  line-height: 39rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 7rpx;
+}
+
+.name text {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 颜色尺寸 */
+
+.color-sku {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+/* 文字调整 */
+
+.color {
+  font-size: 30rpx;
+  color: #666;
+  margin-right: 100rpx;
+}
+
+.sku {
+  font-size: 30rpx;
+  color: #666;
+}
+
+/* 价格 */
+
+.price {
+  font-size: 28rpx;
+  color: #ef9ba8;
+}
+
+/* 数量 */
+
+.numbers {
+  font-size: 28rpx;
+  color: #ef9ba8;
+  margin-top: 140rpx;
+}
+
+/* 间隔线 */
+
+/* .info-hr{
+  width: 660rpx;
+  border-bottom: 1rpx solid #666;
+} */
+
+/* 支付配送+优惠券+金额... */
+
+.box2 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 29px;
+}
+
+/* 支付方式 */
+
+.box3 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+/* 文字效果 */
+.pay_title1{
+  font-size: 30rpx;
+  color: #303030;
+  margin-right:420rpx;
+
+}
+
+.pay_title2{
+  font-size: 30rpx;
+  color: #303030;
+}
+
+/* 支付按钮 */
+.pay-btn{
+  font-size: 30rpx;
+  padding:0rpx 20rpx;
+  color: #ffffff;
+}
+
+/*收货地址间隔*/
+
+.address-hr {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 15rpx;
+}
+
+/*订单详情面板*/
+
+.zan-panel__top {
+  border-top: none;
+  margin-top: 0;
+}
+
+/*订单小计*/
+
+.tarde-summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.tarde-summary-text {
+  color: #000311;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.tarde-summary-price {
+  color: #ff6200;
+  font-size: 28rpx;
+}
+
+/*买家留言*/
+
+.trade-note-container {
+  background-color: #fff;
+  display: flex;
+  padding: 0 10rpx 20rpx 10rpx;
+  flex-direction: column;
+}
+
+.text-bar {
+  height: 60rpx;
+}
+
+.text-major {
+  line-height: 60rpx;
+}
+
+/*汇总栏*/
+
+.summary-container {
+  padding: 10px 15px;
+}
+
+.summary-container text {
+  font-size: 30rpx;
+  color: #303030;
+}
+
+.summary-container .summary-text {
+  color: #f60;
+}
+
+/* 金额+运费 */
+
+/* 容器 */
+
+.summary-line-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+/* 文字大小设定 */
+
+.summary-title {
+  font-size: 30rpx;
+  color: #303030;
+}
+
+.summary-text {
+  font-size: 30rpx;
+  color: #303030;
+}
+
+/*购买栏*/
+
+.tarde-action-bar {
+  width: 702rpx;
+  height:100rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  bottom: 0px;
+  justify-content: flex-end;
+}
+
+/* 提示文字 */
+.tarde-text{
+  margin-right:205rpx;
+}
+
+.trade-confirm-button {
+  height: 60rpx;
+  width: 200rpx;
+  border-radius: 10rpx;
+  background-color: #f5cb64;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  margin-right:15rpx;
+
+}
+
+.trade-confirm-disable {
+  background-color: #b0b0b0;
+}
+
+.trade-confirm-button text {
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.tarde-total-text {
+  font-size: 34rpx;
+  color: #000311;
+}
+
+.tarde-total-price {
+  color: #ff6200;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-right: 20rpx;
+}
+
+.coupon-tips{
+  font-size: 11px;
+  color:#f5cb64;
+  margin-left:8px;
+}

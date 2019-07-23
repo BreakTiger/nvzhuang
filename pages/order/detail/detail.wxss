@@ -1,0 +1,349 @@
+@import "/templates/address/show/address-show-template.wxss";
+@import "/templates/order/detail-item/order-item-template.wxss";
+
+/* 页面容器 */
+
+page {
+  /* height: 100%; */
+  background-color: #f7f6f2;
+}
+
+/* 整体容器 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-bottom: 120rpx;  */
+}
+
+/* 颜色框 */
+
+.header-bkc {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #f5cf72;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+/* 容器1 */
+
+/* 存储状态+店铺详细+地址+商品信息等 */
+
+.box1 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: -90rpx;
+  margin-bottom: 21rpx
+}
+
+/* 订单状态 */
+
+.oder-types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx;
+}
+
+/* 图片 */
+
+.icon {
+  width: 27rpx;
+  height: 27rpx;
+  margin-right: 10rpx;
+}
+
+/* 容器2 */
+
+.box2 {
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 文字大小 */
+.zan-cell text{
+  font-size: 24rpx;
+  color: #666666;
+}
+
+
+
+
+/*状态栏*/
+
+.order-status-bar {
+  background-color: #fff;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40rpx 30rpx;
+}
+
+/*状态描述*/
+
+.order-status-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+/*状态图标*/
+
+.order-status-icon {
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: middle;
+}
+
+/*状态文本*/
+
+.order-status-text {
+  font-size: 33rpx;
+  color: #262626;
+}
+
+.order-status-desc {
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #a3a3a3;
+}
+
+/*地址与状态的间隔*/
+
+.status-address-gap {
+  height: 1px;
+  width: 100%;
+  background-color: #e7e7e7;
+}
+
+/*收货地址间隔*/
+
+.address-hr {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 15rpx;
+}
+
+/*买家留言*/
+
+.trade-note-container {
+  background-color: #fff;
+  margin-left: 20rpx;
+  display: flex;
+  padding: 0 10rpx 20rpx 10rpx;
+  flex-direction: column;
+}
+
+.text-bar {
+  height: 60rpx;
+}
+
+.text-major {
+  line-height: 60rpx;
+}
+
+/*订单明细*/
+
+.order-detail-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20rpx;
+}
+
+.order-detail-key-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 20rpx;
+}
+
+.order-detail-container text {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.order-detail-value-container {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/*订单小计*/
+
+.tarde-summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.tarde-summary-text {
+  color: #000311;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.tarde-summary-price {
+  color: #ff6200;
+  font-size: 28rpx;
+}
+
+/*购买栏*/
+
+.tarde-action-bar {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100rpx;
+  width: 100%;
+  background-color: #fafafa;
+  border-top: 1px solid #dcdcdc;
+}
+
+.trade-confirm-button {
+  height: 100%;
+  width: 240rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #1296db;
+  color: #fff;
+}
+
+.trade-confirm-button text {
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.tarde-total-text {
+  font-size: 34rpx;
+  color: #000311;
+}
+
+.tarde-total-price {
+  color: #ff6200;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-right: 20rpx;
+}
+
+.trade-full-button {
+  height: 100%;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #1296db;
+  color: #fff;
+}
+
+/*实付款*/
+
+.summary-final-container {
+  float: right;
+  width: 100%;
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1px solid #dcdcdc;
+  text-align: right;
+}
+
+.summary-final-container .final-title {
+  color: #000311;
+  font-size: 30rpx;
+}
+
+.summary-final-container .final-text {
+  color: #ff6200;
+  font-size: 30rpx;
+}
+
+/*按钮样式调整*/
+
+.tarde-button-panel {
+  padding-right: 20rpx;
+}
+
+/*物流状态预览栏*/
+
+.order-trace-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 25rpx;
+  background-color: #fff;
+}
+
+/*跟踪-图标*/
+
+.order-trace-icon, .order-trace-more {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+/*跟踪-主区域*/
+
+.trace-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 600rpx;
+  margin-left: 20rpx;
+}
+
+/*跟踪-主文本*/
+
+.trace-info-text {
+  font-size: 28rpx;
+  color: #262626;
+  text-overflow: ellipsis;
+  word-break: keep-all; /* 不换行 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+}
+
+/*跟踪-时间戳*/
+
+.trace-info-timestape {
+  margin-top: 10rpx;
+}
+
+/*订单详情面板*/
+
+.zan-panel__top {
+  border-top: none;
+  margin-top: 0;
+}
+
+/*汇总栏*/
+
+.summary-container {
+  padding: 10px 15px;
+  width: auto;
+}
+
+.summary-container text {
+  font-size: 30rpx;
+  color: #303030;
+}
+
+.summary-container .summary-text {
+  color: #f60;
+}
+
+.summary-line-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5rpx 0;
+}

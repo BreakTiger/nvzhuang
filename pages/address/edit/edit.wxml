@@ -1,0 +1,99 @@
+<!-- 整体盒子 -->
+<view class='container'>
+
+  <!-- 颜色框 -->
+  <view class='BKC'></view>
+
+
+  <!-- 表单 -->
+  <form bindsubmit="savePersonInfo" wx:if="{{init}}">
+
+    <!-- 表单容器 -->
+    <view class="form-list">
+      <!-- 姓名 -->
+      <view class="form-item">
+        <view class="form-item-hd">收货人姓名：</view>
+        <view class="form-item-bd">
+          <input type="text" placeholder-class="input-placeholder" name="receiver_name" value="{{receiver_name}}" placeholder="请输入姓名" />
+        </view>
+      </view>
+
+      <!-- 手机号码 -->
+      <view class="form-item">
+        <view class="form-item-hd">手机号码：</view>
+        <view class="form-item-bd">
+          <input type="number" placeholder-class="input-placeholder" name="receiver_phone" value="{{receiver_phone}}" placeholder="请输入手机号码" maxlength="11" />
+        </view>
+      </view>
+
+
+      <!-- 地址 -->
+      <view class="form-item">
+        <view class="form-item-hd">地址选择：</view>
+        <view class="form-item-bd" bindtap="showDistpicker">
+          <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}}">
+            <block wx:if="{{provinceName[provinceSelIndex]}}">{{provinceName[provinceSelIndex]}} {{cityName[citySelIndex]}} {{districtName[districtSelIndex]}}</block>
+            <block wx:else>
+
+              <text style='font-size: 24rpx;color: #ef9ba8;margin-left:385rpx'>请选择</text>
+              <image src='/images/mine/right-icon@2x.png' style='width:10rpx;height:19rpx;margin-left:10rpx;'></image>
+
+            </block>
+          </view>
+          <input type='hidden' name="province_id" value='{{provinceCode[provinceSelIndex]}}' class="hidden" />
+          <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden" />
+          <input type='hidden' name="city_id" value='{{cityCode[citySelIndex]}}' class="hidden" />
+          <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden" />
+          <input type='hidden' name="district_id" value='{{districtCode[districtSelIndex]}}' class="hidden" />
+          <input type="text" name="district" value="{{districtName[districtSelIndex]}}" class="hidden" />
+        </view>
+      </view>
+
+
+      <!-- 详细地址填写 -->
+      <view class="form-item">
+        <view class="form-item-hd">详细地址：</view>
+        <view class="form-item-bd">
+          <input type="text" placeholder-class="input-placeholder" name="address" value="{{address}}" placeholder="请输入详细地址" maxlength="20" />
+        </view>
+      </view>
+    </view>
+
+    <!-- 按钮 -->
+    <button formType="submit" class="save-btn">添 加</button>
+
+
+  </form>
+
+
+
+
+
+
+
+  <!-- 地址选择 -->
+  <view class="distpicker {{showDistpicker ? '' : 'hidden'}}">
+    <view class="distpicker-btn">
+      <view class="distpicker-cancel-btn" bindtap="distpickerCancel">取消</view>
+      <view class='distpicker-center-title'>联系地区</view>
+      <view class="distpicker-sure-btn" bindtap="distpickerSure">确定</view>
+    </view>
+    <picker-view indicator-style="height: 40px;" class="distpicker-content" value="{{value}}" bindchange="changeArea">
+      <!-- 省 -->
+      <picker-view-column>
+        <view wx:for="{{provinceName}}" wx:key="province" class="area-item">{{item}}</view>
+      </picker-view-column>
+      <!-- 市 -->
+      <picker-view-column>
+        <view wx:for="{{cityName}}" wx:key="city" class="area-item">{{item}}</view>
+      </picker-view-column>
+      <!-- 区 -->
+      <picker-view-column>
+        <view wx:for="{{districtName}}" wx:key="district" class="area-item">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+  <view class="mask" catchtap="distpickerCancel" hidden="{{!showDistpicker}}"></view>
+  <view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>
+
+</view>

@@ -1,0 +1,78 @@
+.goods-item-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  text-align: center;
+  margin-right: 40rpx;
+}
+
+.goods-item-image {
+  height: 429rpx;
+  width: 300rpx;
+  border-radius: 20rpx;
+}
+
+.goods-item-describe {
+  width: 248rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  padding: 0 20rpx;
+}
+
+.goods-item-title {
+  width: 248rpx;
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  word-break: keep-all; /* 不换行 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+  color: #333333;
+}
+
+.goods-item-price-cost {
+  font-size: 33rpx;
+  color: #ef9ba8;
+}
+
+.goods-item-price-original {
+  margin-left: 15rpx;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.recommend-image {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+}
+
+.goods-sales-container {
+  position: absolute;
+  padding: 3px 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 50px;
+  right: 0;
+  bottom: 110rpx;
+  background-color: #1296db;
+  -webkit-filter: opacity(0.9);
+}
+
+.goods-sales-container text {
+  color: #fff;
+}
+
+.cart-image {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 5px;
+  right: 5px;
+}

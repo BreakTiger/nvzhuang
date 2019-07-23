@@ -1,0 +1,27 @@
+<!--优惠券列表页面-->
+<import src="/templates/tab/index.wxml" />
+<import src="/templates/coupon/item/coupon-item-template.wxml" />
+
+<!-- 存有优惠卷的时候显示的内容 -->
+<view class="container" wx:if="{{init}}">
+  <!--优惠券列表-->
+  <view class="coupon-list-container">
+    <block wx:for="{{coupons}}" wx:key="id">
+      <template is="couponItemTemplate" data="{{...item}}"></template>
+    </block>
+  </view>
+
+</view>
+
+<!-- 无优惠券的时候，显示的内容 -->
+<!--占位提示-->
+
+<view class="order-empty-tips" wx:if="{{init && coupons.length == 0}}">
+  <image src="/images/icons/order-empty.png" />
+  <!-- 文字提示 -->
+  <view class='hint'>
+    <text>每个女孩都该做到两点:</text>
+    <text class='hint-text'>有品位且光芒四射</text>
+  </view>
+
+</view>

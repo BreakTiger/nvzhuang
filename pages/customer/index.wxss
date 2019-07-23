@@ -1,0 +1,307 @@
+page {
+  height: 100%;
+  background-color: #f2f2f2;
+}
+
+/* 整体盒子 */
+
+.user-conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 顶部背景框 */
+
+.header-BKC {
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #f5cf72;
+}
+
+/*用户信息*/
+
+/* 头像+用户名+用户个性签名 */
+
+/* 容器 */
+
+.user-info-container {
+  width: 702rpx;
+  height: 205rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: -78rpx;
+  margin-bottom: 22rpx;
+}
+
+/* 图片 */
+
+.user-avatar {
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  margin-left: -130rpx;
+  margin-right: 30rpx;
+}
+
+.user-avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 用户名+签名
+/* 容器 */
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 用户名 */
+
+.user-nickname {
+  font-size: 40rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+}
+
+/* 可滚动的导航 */
+
+/* 容器 */
+
+.zan-pannel {
+  width: 702rpx;
+  height: 212rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 26rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 标题容器 */
+
+.all-oders_box {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  font-size: 14px;
+  padding: 20rpx;
+}
+
+/* 文字容器 */
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 30rpx;
+  color: #303030;
+  margin-right: 530rpx;
+}
+
+/* 图标容器 */
+
+.right_icon {
+  width: 12rpx;
+  height: 23rpx;
+  /* display: block; */
+  margin-top: -15rpx;
+}
+
+.right_icon image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 四个导航 */
+
+/* 容器 */
+
+.navlist {
+  width: 702rpx;
+  height: 116rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 单个容器 */
+
+.nav-box {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 图片 */
+
+/* 付款 */
+
+.nav-pay {
+  width: 39rpx;
+  height: 54rpx;
+  margin-bottom: 27rpx;
+}
+
+.nav-pay image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 代发货 */
+
+.nav-sent {
+  width: 58rpx;
+  height: 58rpx;
+  margin-bottom: 27rpx;
+}
+
+.nav-sent image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 待收货 */
+
+.nav-take {
+  width: 57rpx;
+  height: 54rpx;
+  margin-bottom: 27rpx;
+}
+
+.nav-take image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 全部订单 */
+
+.nav-oder {
+  width: 46rpx;
+  height: 53rpx;
+  margin-bottom: 27rpx;
+}
+
+.nav-oder image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 文字 */
+
+.nav-text {
+  font-size: 30rpx;
+  color: #666;
+}
+
+/*列表*/
+
+.zan-cell__bd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* .zan-cell__bd image {
+  height: 46rpx;
+  width: 46rpx;
+  margin-right: 25rpx;
+  vertical-align: middle;
+} */
+
+button.zan-cell{
+  text-align: left;
+  background: #FFFFFF;
+}
+
+/*底部边线*/
+
+.footer-line {
+  position: fixed;
+  height: 1px;
+  width: 100%;
+  background-color: #e6e8eb;
+  bottom: 0px;
+}
+
+.user-func-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 10rpx;
+}
+
+.user-func-item {
+  display: flex;
+  font-size: 30rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20rpx;
+}
+
+.func-text {
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+
+.weui-footer {
+  margin-top: 30rpx;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+.weui-footer_fixed-bottom {
+  position: fixed;
+  bottom: 0.52em;
+  left: 0;
+  right: 0;
+}
+
+.weui-footer__links {
+  font-size: 0;
+}
+
+.weui-footer__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.62em;
+  position: relative;
+  font-size: 14px;
+  color: #586c94;
+}
+
+.weui-footer__link:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1rpx solid #c7c7c7;
+  color: #c7c7c7;
+  left: -.65em;
+  top: 0.36em;
+  bottom: 0.36em;
+}
+
+.weui-footer__link:first-child:before {
+  display: none;
+}
+
+.weui-footer__text {
+  padding: 0 0.34em;
+  font-size: 12px;
+}

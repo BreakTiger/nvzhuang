@@ -1,0 +1,161 @@
+/* 整体页面 */
+
+page {
+  background-color: #f7f6f2;
+}
+
+/* 整体容器 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 颜色框 */
+
+.BKC {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #f5cf72;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+/* 信息内容容器 */
+
+.info-container {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -97rpx;
+}
+
+/* 商品简介栏 */
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 22rpx;
+}
+
+/* 店铺信息 */
+
+.header-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx;
+}
+
+.icon {
+  width: 27rpx;
+  height: 27rpx;
+}
+
+/* 商品简介 */
+
+.info-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 30rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f5f5f5;
+}
+
+.info-img {
+  width: 181rpx;
+  height: 197rpx;
+  margin-right: 32rpx;
+}
+
+.name-sku-price {
+  display: flex;
+  flex-direction: column;
+  width: 440rpx;
+}
+
+/* 商品名字 */
+
+.productname {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 规格 */
+
+.sku-color {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 25rpx;
+  margin-top: 35rpx;
+}
+
+.color-box {
+  margin-right: 210rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.sku-box {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.price {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 330rpx;
+}
+
+.number {
+  font-size: 24rpx;
+  color: #f2b2bb;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+.list-item text{
+  font-size: 28rpx;
+  color: #666;
+}
+
+
+.box3 {
+  display: flex;
+  flex-direction: column;
+  width: 702rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.fooerr-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx;
+}
+
+.express{
+  width: 661rpx;
+  height: 288rpx;
+  background-color: #f7f6f2;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}

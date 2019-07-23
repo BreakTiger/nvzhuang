@@ -1,0 +1,62 @@
+<!-- 我的退货：列表 -->
+<import src="/templates/loadmore/index.wxml" />
+<!-- 整体容器 -->
+<view class='container'>
+  <!-- 颜色框 -->
+  <view class='BKC'></view>
+
+  <!-- 信息列表容器 -->
+  <view class='list-container' wx:if="{{datalist.length>0}}">
+
+    <block wx:for='{{datalist}}' wx:key="unique">
+      <!-- 内容 -->
+      <view class='item-box'>
+        <!-- 头部信息 -->
+        <view class='header-info' catchtap='onReturnTap'>
+          <!-- 图片 -->
+          <image src='/images/car/circle-icon@2x.png' class='header-icon'></image>
+          <!-- 店名 -->
+          <text class='shop_name'></text>
+          <!-- 处理状态 -->
+          <text class='order-type'>{{item.seller_status_text}}</text>
+        </view>
+
+        <block wx:for='{{item.goodsList}}' wx:for-item="goods">
+          <!-- 商品内容 -->
+          <view class='info-box'>
+            <!-- 图片 -->
+            <image src='{{goods.goods_image}}' class='info-img'></image>
+            <!-- 信息 -->
+            <view class='name-sku-price'>
+              <!-- 商品名字 -->
+              <text class='productname'>{{goods.goods_name}}</text>
+              <!-- 规格 -->
+              <view class='sku-color'>
+                <view class='color-box'>
+                  <text>{{item.color}}</text>
+                </view>
+              </view>
+              <!-- 价格+数量 -->
+              <view class='price-number'>
+                <text class='price'>￥{{goods.goods_price}}</text>
+                <text class='number'>X{{goods.goods_num}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+
+
+        <!-- 汇总 -->
+        <view class='gather'>
+          <text class='count'></text>
+          <text class='total'>合计：￥{{item.refund_amount}}</text>
+        </view>
+
+      </view>
+    </block>
+  </view>
+
+  <view class='list-container' wx:else>
+    <view class='nomore'><text>没有退款退货的订单</text></view>
+  </view>
+</view>

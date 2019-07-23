@@ -1,0 +1,24 @@
+<!-- <import src="/templates/tab/index.wxml" /> -->
+<import src="/templates/goods/grid/goods-grid-template.wxml" />
+
+
+<view class='ify_container'>
+  <!-- 搜索框 -->
+  <view>
+    <view class='ify_search' catchtap='onSearchTap'>
+      <icon type="search" size="13" color="#666666" />
+      <text class='search-txt'>搜索</text>
+    </view>
+  </view>
+
+  <!-- 间隔线 -->
+  <view class='ify_underline'></view>  
+
+</view>
+
+<!-- ify_container   -->
+<view class='container' wx:if="{{init}}">
+  <scroll-view scroll-y="true" bindscroll="onScroll" bindscrolltolower="onReachBottom">
+    <template is="goodsGridTemplate" data="{{goods, tab, loading, nomore, fixed}}" />
+  </scroll-view>
+</view>

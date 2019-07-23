@@ -1,0 +1,26 @@
+<!--店铺项目模板-->
+<!--依赖：无-->
+<!--输入参数：...shop-->
+<!--事件：点击-->
+<template name="shopItemTemplate">
+    <view class="shop-item-container" data-shop-id="{{id}}" catchtap="onShopItemTap">
+        <!--店铺图片-->
+        <image class="shop-item-image" src="{{avatar}}" />
+        <view class="shop-synopsis-container">
+            <text class="shop-item-title">{{name}}</text>
+            <text class="shop-item-describe">地址：{{address}}</text>
+            <view class="shop-item-notice">
+                <view class="notiec-title">
+                    <text >公告：</text>
+                </view>
+                <swiper class="notice-swiper" vertical autoplay circular interval="3000"> 
+                    <swiper-item wx:for="{{notices}}" wx:key="index">
+                        <text>{{item.content}}</text>
+                    </swiper-item>
+                </swiper>
+            </view>
+        </view>
+        <image class="icon-big" src="/images/icons/more-white.png" />
+    </view>
+    <view class="close-tips" wx:if="{{!status.open}}"><text>提示： {{status.closeTips}}</text></view>
+</template>

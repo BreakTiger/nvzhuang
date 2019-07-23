@@ -1,0 +1,98 @@
+/* 整体盒子 */
+
+.address-item-container {
+  width: 650rpx;
+  height: 158rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1rpx solid #E3E3E3;
+  background-color: #fff;
+}
+
+.address-icon-container {
+  width: 60rpx;
+  text-align: center;
+}
+
+.address-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 660rpx;
+  margin-top:30rpx;
+  margin-left: 16rpx;
+}
+
+.address-info-name {
+  color: #666666;
+  font-size: 24rpx;
+}
+
+.address-info-phone {
+  font-size: 24rpx;
+  margin-left: 45rpx;
+  color: #666666;
+  margin-right: 20rpx;
+}
+
+.address_icon{
+  width: 19rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 50rpx;
+}
+
+.address-name-phone-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/*
+* 地址详情
+*/
+
+.address-info-detail {
+  color: #666666;
+  font-size: 24rpx;
+}
+
+.address-detail-container {
+  margin-top: 10rpx;
+}
+
+/*默认标签*/
+
+.address-default-label {
+  margin-left: 10rpx;
+}
+
+/*图标和文字*/
+
+.address-empty-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+/* 图标大小 */
+
+.add-img {
+  width: 61rpx;
+  height: 49rpx;
+  margin-top: 15rpx;
+}
+
+.add-img image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 提示信息 */
+
+.address-empty-text {
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 15rpx;
+}

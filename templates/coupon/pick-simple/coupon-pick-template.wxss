@@ -1,0 +1,27 @@
+.coupon-pick-container{
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px #add8f7 solid;
+    border-radius: 5rpx;
+    justify-content: center;
+    align-items: center;
+    width: 200rpx;
+    padding-bottom: 10rpx;
+    padding-top: 10rpx;
+    margin-right: 5rpx;
+}
+.coupon-pick-container text{
+    color: #108ee9;
+}
+.coupon-value-unit{
+    font-size: 32rpx;
+}
+.coupon-value-text{
+    font-size: 50rpx;
+}
+.coupon-value-container{
+
+}
+.coupon-limit-text{
+    font-size: 22rpx;
+}

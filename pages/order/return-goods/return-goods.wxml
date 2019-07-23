@@ -1,0 +1,97 @@
+<!-- 退货详情 -->
+
+<view class='container'>
+  <!-- 颜色框 -->
+  <view class='BKC'></view>
+
+  <view class='info-container'>
+
+    <block wx:for='{{info}}'>
+    
+      <view class='box1'>
+
+       <!-- 第一行 -->
+        <view class='header-line'>
+          <image src='/images/car/circle-icon@2x.png' class='icon'></image>
+          <text>退货状态：{{item.types}}</text>
+        </view>
+
+        <block wx:for='{{item.message}}'>
+          <view class='info-line'>
+            <!-- 图片  -->
+            <image src='{{item.imgsrc}}' class='info-img'></image>
+            <!-- 规格信息 -->
+            <view class='name-sku-price'>
+              <!-- 商品名字 -->
+              <text class='productname'>{{item.name}}</text>
+              <!-- 规格 -->
+              <view class='sku-color'>
+                <!-- 颜色 -->
+                <view class='color-box'>
+                  <text>颜色：</text>
+                  <text>{{item.color}}</text>
+                </view>
+
+                <!-- 尺码 -->
+                <view class='sku-box'>
+                  <text>尺码：</text>
+                  <text>{{item.sku}}</text>
+                </view>
+
+              </view>
+
+              <!-- 价格+数量 -->
+              <view class='price-number'>
+                <text class='price'>￥{{item.price}}</text>
+                <text class='number'>X{{numbers}}</text>
+              </view>
+
+            </view>
+          </view>
+        </block>
+
+
+
+      </view>
+
+      <view class='box2'>
+        <view class='list-item'>
+          <text>退款金额：</text>
+          <text>￥{{item.price}}</text>
+        </view>
+
+        <view class='list-item'>
+          <text>退货缘由：</text>
+          <text>{{item.reason}}</text>
+        </view>
+
+        <view class='list-item'>
+          <text>申请时间：</text>
+          <text>{{item.time}}</text>
+        </view>
+
+        <view class='list-item'>
+          <text>退款编号:</text>
+          <text>{{item.suhao}}</text>
+        </view>
+      </view>
+    </block>
+
+
+
+
+    <view class='box3'>
+      <view class='fooerr-line'>
+        <image src='/images/car/circle-icon@2x.png' class='icon'></image>
+        <text>快递信息</text>
+      </view>
+
+      <view class='express'></view>
+
+    </view>
+
+
+
+  </view>
+
+</view>

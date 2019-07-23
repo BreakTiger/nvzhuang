@@ -1,0 +1,97 @@
+<!-- 店铺详情页面 -->
+<import src="/templates/loadmore/index.wxml" />
+<!-- 盒子 -->
+<view class='container' wx:if="{{init}}">
+
+  <!-- 轮播图 -->
+  <swiper class='home-swiper' autoplay='true' interval='5000' bindchange='changDot'>
+    <!-- 设置自动播放，切换间隔时间-->
+    <swiper-item wx:for="{{home_img}}" wx:for-item="item" wx:key="unique">
+      <image src='{{item.image_url}}' data-path="{{item.path}}" bindtap="slideClick"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 轮播图指示点 -->
+  <view class="dots">
+    <block wx:for="{{home_img}}" wx:key="unique">
+      <view class="dot {{index == swiperCurrent?'actives':''}}"></view>
+    </block>
+  </view>
+
+  <!-- 店标和店铺简介 -->
+  <view class='banner-info-box'>
+
+    <!-- 店标+店名 横向排布 -->
+    <!-- 盒子 -->
+    <view class='bannner-name '>
+      <!-- 图片 -->
+      <view class='banner'>
+        <image src='{{shop.store_logo}}'></image>
+      </view>
+      <!-- 店名 -->
+      <view class='name'>{{shop.store_name}}</view>
+    </view>
+
+
+    <!-- 数量 -->
+    <view class='number-info'>
+      <!-- 商品 -->
+      <view class='goods1'>
+        <text class='shopname'>商品</text>
+        <text>{{shop.goods_num}}</text>
+      </view>
+
+      <!-- 数量 -->
+      <view class='goods2'>
+        <text class='shopname'>销量</text>
+        <text>{{shop.salenum}}</text>
+      </view>
+    </view>
+
+    <!-- 店铺简介 -->
+    <view class='shopInfo'>
+      <text class='Info1'>店铺简介:</text>
+      <!-- 简介内容 -->
+      <text class='Info2'>{{shop.summary}}</text>
+    </view>
+  </view>
+
+  <!-- 全部产品 -->
+  <view class='all_products'>
+
+    <!-- 标题 -->
+    <view class='products-title'>
+      <view class='port'></view>
+      <text class='title1'>全部商品</text>
+      <text class='title2'>ALL</text>
+    </view>
+
+    <!-- 内容 -->
+    <!-- 盒子 -->
+    <view class='content-box'>
+      <block wx:for="{{goodsList}}" wx:for-item="item" wx:key="unique">
+        <view class='products_content' data-id="{{item.id}}" catchtap='onGoodsTap'>
+          <view class='content_img'>
+            <image src='{{item.goods_image}}'></image>
+          </view>
+          <text class='produc_name'>{{item.goods_name}}</text>
+          <text>{{item.price}}</text>
+        </view>
+      </block>
+      <template is="zan-loadmore" data="{{loading: loading}}" />
+      <template is="zan-loadmore" data="{{nodata: nomore, nodata_str: '没有更多商品'}}" />
+    </view>
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+</view>

@@ -1,0 +1,149 @@
+/*外框容器*/
+
+.cart-item-wrap {
+  width: 702rpx;
+  height: 281rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.4);
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  transition: left 0.2s ease-in-out;
+  position: relative;
+  top: -70rpx;
+}
+
+.cart-item-container {
+  height: 281rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  justify-content: space-between;
+}
+
+.cart-item-delete {
+  position: absolute;
+  top: 0;
+  right: -60px;
+  background-color: #ff4343;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-delete text {
+  font-size: 32rpx;
+  color: white;
+}
+
+/*选择框容器*/
+
+.cart-check-container {
+  width: 34rpx;
+  height: 34prx;
+  margin-right: 20rpx;
+  text-align: center;
+}
+
+/*图片*/
+
+.cart-item-image {
+  width: 181rpx;
+  height: 197rpx;
+  border-radius: 5px;
+}
+
+.cart-item-image image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 信息容器 */
+
+.cart-info-container {
+  width: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 20rpx;
+  justify-content: space-between;
+  height: 180rpx;
+}
+
+/*商品主标题*/
+
+.goods-title-text {
+  width: 275rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+font-weight: bold;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 删除图标 */
+
+.deimg {
+  width: 30rpx;
+  height: 29rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 34rpx;
+}
+
+.deimg image {
+  width: 100%;
+  height: 100%;
+}
+
+/*规则*/
+.goods-color-sku {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.color-sku {
+  margin-right: 70rpx;
+}
+
+.color-sku text{
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.color-sku .t1{
+  margin-right: 18rpx;
+}
+
+
+
+
+
+
+
+
+
+/*商品价格*/
+
+.goods-price-small {
+  font-size: 28rpx;
+  color: #ef9ba8;
+}
+
+.goods-price-big {
+  font-size: 28rpx;
+  color: #ef9ba8;
+}
+
+/*价格/数量栏*/
+
+.goods-price-num-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

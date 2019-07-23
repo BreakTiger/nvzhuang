@@ -1,0 +1,52 @@
+<!-- 地址项目模板-->
+<!--依赖：无-->
+<template name="addressItemTemplate">
+  <view class="address-item-container">
+    <!-- 地址内容 -->
+    <view class="address-info-container" data-id="{{id}}" catchtap="onAddressTap">
+
+      <!-- 图标：编辑+删除 -->
+
+      <view class="address-opt-container">
+        <!-- 编辑 -->
+        <view class="address-opt-action" data-id="{{id}}" catchtap="onEditTap">
+          <image src="/images/mine/edit-icon@2x.png" />
+        </view>
+        <!-- 删除 -->
+        <view class="address-opt-action" data-id="{{id}}" catchtap="onDeleteTap">
+          <image src="/images/mine/delete-icon@2x.png" />
+        </view>
+      </view>
+
+
+      <!-- 收货人信息：姓名+电话+地址 -->
+      <view class="address-name-phone-container">
+        <text class="address-info-name">收货人姓名：{{receiver_name}}</text>
+        <text class="address-info-phone">联系方式：{{receiver_phone}}</text>
+      </view>
+      <view class="address-detail-container">
+        <text class="address-info-detail">收货地址:</text>
+        <text>{{province+city+county+address}}</text>
+      </view>
+    </view>
+    <view class="address-mgr-container">
+      <view class="address-default-container">
+        <view catchtap="onDefaultTap" data-id="{{id}}">
+          <view class="zan-icon zan-icon-{{is_default ? 'checked' : 'check'}}" />
+          <text>设为默认</text>
+        </view>
+      </view>
+
+      <!-- <view class="address-opt-container">
+                <view class="address-opt-action" data-id="{{id}}" catchtap="onEditTap">
+                    <image src="/images/icons/edit.png"/>
+                </view>
+                <view class="address-opt-action" data-id="{{id}}" catchtap="onDeleteTap">
+                    <image src="/images/icons/delete.png"/>
+                </view>
+            </view>  -->
+
+
+    </view>
+  </view>
+</template>

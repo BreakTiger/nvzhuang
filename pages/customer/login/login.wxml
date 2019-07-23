@@ -1,0 +1,35 @@
+<!-- 整体盒子 -->
+<view class='container'>
+
+  <!-- 店铺头像 -->
+  <image class='user-avatar' src="{{shop.store_logo}}"></image>
+
+  <!-- 提示 -->
+
+  <!-- 店名 -->
+  <text class="user-nickname">{{shop.store_name}}</text>
+
+  <!-- 简介 -->
+  <text class="user-desc">购买商品、查看订单需要进行用户信息授权</text>
+
+  <!-- 按钮 -->
+
+  <button open-type="getUserInfo" class="tologin" bindgetuserinfo="confirm">确认授权</button>
+
+
+  <button class="toreturn" catchtap="back">返回首页</button>
+
+  <!-- 技术提供者说明 -->
+
+  <view class='t_provider'>
+    <navigator url=''>
+      <text class='linkaddress'>帝都网络提供技术支持</text>
+    </navigator>
+  </view>
+
+
+
+
+
+
+</view>

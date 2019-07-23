@@ -1,0 +1,102 @@
+/* 整体盒子 */
+
+.search_container {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部 */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-bottom: 38rpx;
+  margin-left: 18rpx;
+}
+
+/* 搜索框盒子：图片加输入框 */
+
+.search_box {
+  width: 570rpx;
+  height: 55rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f7f6f2;
+  border-radius: 20rpx;
+}
+
+/* 图片 */
+
+.icon {
+  width: 33rpx;
+  height: 33rpx;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.icon image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 输入框 */
+
+input {
+  width: 470rpx;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+}
+
+/* 搜索按钮 */
+
+.s_btn {
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 18rpx;
+  line-height: 25px;
+  width: 130rpx;
+}
+
+/* 热门搜索 */
+
+.hot_search {
+  display: flex;
+  flex-direction: column;
+  padding-left: 48rpx;
+}
+
+/* 标题 */
+
+.title {
+  font-size: 30rpx;
+  margin-top: 38rpx;
+  margin-bottom: 37rpx;
+}
+
+/* 标题 */
+
+.lable_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lable {
+  /* 边框 */
+  border: 3rpx solid #666;
+  border-radius: 10rpx;
+  /* 外部边距 */
+  margin-right: 75rpx;
+  margin-bottom: 40rpx;
+  /* 文字 */
+  font-size: 30rpx;
+  color: #666;
+  /* 内部边距 */
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  padding-top: 14rpx;
+  padding-bottom: 14rpx;
+}

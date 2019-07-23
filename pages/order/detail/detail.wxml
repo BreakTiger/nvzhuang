@@ -1,0 +1,100 @@
+<!--订单详情页-->
+<!--依赖：地址项目页面、订单项目页面-->
+<import src="/templates/address/show/address-show-template.wxml" />
+<import src="/templates/order/detail-item/order-item-template.wxml" />
+
+
+<!-- 整体容器 -->
+
+<view class="container" wx:if="{{init}}">
+
+  <!-- 颜色框 -->
+  <view class='header-bkc'></view>
+
+  <!-- 容器1 -->
+  <!-- 内容：支付状态+地址+店铺信息+商品信息+价格总和+支付方式 -->
+  <view class='box1'>
+    <!-- 订单状态 -->
+    <view class='oder-types'>
+      <!-- 图片 -->
+      <image class='icon' src='/images/car/circle-icon@2x.png'></image>
+      <!-- 支付状态 -->
+      <text>{{order.order_status_text}}</text>
+    </view>
+    <!-- 地址 -->
+    <template is="addressItemTemplate" data="{{...order.delivery}}" />
+
+    <!-- 订单内容 汇总也在其中 -->
+    <template is="orderItemTemplate" data="{{...order}}" />
+
+    <!-- 支付方式 -->
+    <view class="zan-cell">
+      <text class="zan-cell__bd">支付方式</text>
+      <text class="zan-cell__ft">{{order.payment==1?'微信支付':''}}</text>
+    </view>
+
+    <view class="zan-cell">
+      <text class="zan-cell__bd">买家留言</text>
+      <text class="zan-cell__ft">{{order.delivery.message ? order.delivery.message : '无'}}</text>
+    </view>
+
+    <view class="zan-cell">
+      <text class="zan-cell__bd">商品金额</text>
+      <text class="summary-text">￥{{order.goods_amount}}</text>
+    </view>
+    <view class="zan-cell">
+      <text class="zan-cell__bd">运费</text>
+      <text class="summary-text" wx:if="{{order.shipping_fee>0}}">+￥{{order.shipping_fee}}</text>
+      <text class="summary-text" wx:if="{{order.shipping_fee==0}}">免运费</text>
+    </view>
+    <view class="zan-cell" wx:if="{{order.coupon_amount>0}}">
+      <text class="zan-cell__bd">优惠券</text>
+      <text class="summary-text">-￥{{order.coupon_amount}}</text>
+    </view>
+    <view class="zan-cell" wx:if="{{order.status != 1}}">
+      <text class="zan-cell__bd">实付款：</text>
+      <text class="final-text">￥{{order.order_amount}}</text>
+    </view>
+
+  </view>
+
+  <!-- 容器2 -->
+  <!-- 存有：订单号，下单时间，支付时间，发货时间 -->
+  <view class='box2'>
+
+    <!-- 订单编号 -->
+    <view class="zan-cell">
+      <text>订单编号：</text>
+      <text>{{order.order_sn}}</text>
+    </view>
+    <!-- 下单时间 -->
+    <view class="zan-cell">
+      <text>下单时间：</text>
+      <text>{{order.buy_time}}</text>
+    </view>
+    <!-- 支付时间 -->
+    <view class="zan-cell" wx:if="{{order.pay_time}}">
+      <text>支付时间：</text>
+      <text>{{order.pay_time}}</text>
+    </view>
+    <!-- 发货时间 -->
+    <view class="zan-cell"wx:if="{{order.delivery.shipping_time}}">
+      <text>发货时间：</text>
+      <text>{{order.delivery.shipping_time}}</text>
+    </view>    
+  </view>
+
+  <!--购买栏/需要抽取模板-->
+  <view class="tarde-action-bar" wx:if="{{order.order_status==10}}">
+    <block wx:if="{{order.order_status == 10}}">
+      <view>
+        <text class="tarde-total-text">实付款：</text>
+        <text class="tarde-total-price">￥{{order.order_amount}}</text>
+      </view>
+      <view class="trade-confirm-button" catchtap="onWxPay">
+        <text>去支付</text>
+      </view>
+    </block>    
+  </view>
+  
+</view>

@@ -1,0 +1,51 @@
+<!--订单商品模板 -->
+<!--依赖：无-->
+<!--输入：...carts-->
+<import src="/templates/quantity/index.wxml" />
+
+<template name="cartItemTemplate">
+
+  <view class="cart-item-wrap">
+
+    <view class="cart-item-container" data-cart-id="{{id}}" data-goods-name="{{goods_name}}">
+
+      <!--多选按钮-->
+      <view class="cart-check-container">
+        <view class="zan-icon zan-icon-{{check ? 'checked' : 'check'}}" data-cart-id="{{id}}" catchtap="onCheckTap" />
+      </view>
+
+      <!--商品图片-->.
+      <view class="cart-item-image" data-goods-id="{{goods_id}}" catchtap="onCartTap">
+        <image src="{{goods_image}}"></image>
+      </view>
+      <!--商品说明-->
+      <view class="cart-info-container">
+        <!-- 商品名字 -->
+        <text class="goods-title-text">{{goods_name}}</text>
+        <!-- 商品的颜色和尺寸 -->
+        <view class='goods-color-sku'>
+          <!-- 颜色 -->
+          <view class='color-sku' wx:for="{{goods_spec}}" wx:key="unique" wx:for-index="idx">
+            <text class='t1'></text>
+            <text>{{item}}</text>
+          </view>
+        </view>
+        <!-- 价格+数量按钮 -->
+        <view class="goods-price-num-container">
+          <!-- 价格 -->
+          <view class="goods-price-container">
+            <text class="goods-price-small">￥</text>
+            <text class="goods-price-big">{{goods_price}}</text>
+          </view>
+          <!-- 数量按钮 -->
+          <template is="zan-quantity" data="{{ quantity: goods_num, min: 1, max: stock, componentId: id, size: 'small' }}" />
+        </view>
+      </view>
+      <!-- 删除图标 -->
+      <view class='deimg' data-cart-id="{{id}}" catchtap='onDeleteTap'>
+        <image src='/images/car/delete-icon@2x.png'></image>
+      </view>
+    </view>
+  </view>
+
+</template>

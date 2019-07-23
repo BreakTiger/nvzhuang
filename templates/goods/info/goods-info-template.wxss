@@ -1,0 +1,109 @@
+/* 盒子 */
+
+.goods-info-conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f2;
+}
+
+/* 轮播图 */
+
+.goods-swiper {
+  height: 750rpx;
+  width: 750rpx;
+}
+
+.goods-swiper image {
+  width: 100%;
+  height: 750rpx;
+}
+
+/* 指示点 */
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 585rpx;
+  width: 200rpx;
+  height: 50rpx;
+  left: 540rpx;
+}
+
+.dots .dot {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #333;
+  margin-left: 12rpx;
+  border-radius: 20rpx;
+  /* transform: all 0.6; */
+  opacity: 0.44;
+}
+
+/* 调用的css效果 */
+
+.dots .actives {
+  background-color: #333;
+  opacity: 1;
+}
+
+/* 详情框 */
+
+/* 整体盒子 */
+
+.info-box {
+  width: 702rpx;
+  height: 225rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 630rpx;
+  margin-bottom: 33rpx;
+}
+
+/* 小盒子 */
+
+.number-cust {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 价格和名字 */
+
+.price {
+  font-size: 36rpx;
+  color: #ef9ba8;
+  margin-top: 20rpx;
+  margin-bottom: 25rpx;
+}
+
+.name {
+  width: 682rpx;
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.goods2 {
+  margin-left: 265rpx;
+}
+
+.xiaoliang{
+  font-size: 30rpx;
+}
+
+.yunfei{
+  font-size: 30rpx;
+}
+.number {
+  font-size: 30rpx;
+  margin-left: 15rpx;
+}

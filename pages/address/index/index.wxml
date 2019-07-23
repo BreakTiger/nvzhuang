@@ -1,0 +1,37 @@
+<!--我的地址列表页面-->
+<!--依赖模板：地址列表模板-->
+<import src="/templates/address/mgr/address-item-template.wxml" />
+
+<!-- 整体容器 -->
+<view class="container" wx:if="{{init}}">
+
+  <!-- 颜色框 -->
+  <view class='BKC'></view>
+
+  <!-- 调用地址模版 -->
+  <view class="address-list-container">
+    <block wx:for="{{addresses}}" wx:key="id">
+      <template is="addressItemTemplate" data="{{...item}}" />
+      <view class="gap"></view>
+    </block>
+  </view>
+
+  <!-- 按钮 -->
+  <view class="address-action-bar">
+    <!--view class="address-wechart" catchtap="onWxAddressTap">
+            <image src="/images/icons/wecahrt-white.png" />
+            <text>从微信选择</text>
+        </view-->
+    <navigator class="address-add" url="../edit/edit">
+      <text>新建收货地址</text>
+    </navigator>
+  </view>
+
+
+  <!-- 为空时，显示的内容样式 -->
+  <!--占位提示-->
+  <view class="order-empty-tips" wx:if="{{addresses.length == 0}}">
+    <image src="/images/icons/order-empty.png" />
+    <text>您还没有收货地址</text>
+  </view>
+</view>

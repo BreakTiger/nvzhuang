@@ -1,0 +1,40 @@
+<!-- 地址项目模板-->
+<!--依赖：无-->
+<template name="addressItemTemplate">
+
+  <!-- 盒子 垂直排布-->
+  <view class="address-item-container" catchtap="onAddressTap">
+
+
+    <!-- 没有添加地址时的样式 -->
+    <!-- 图标和文字 -->
+    <view class="address-empty-container" wx:if="{{!id}}">
+      <!-- 图片 -->
+      <view class='add-img'>
+        <image src='/images/car/add-icon@2x.png'></image>
+      </view>
+      <!-- 提示信息 -->
+      <text class='address-empty-text'>收货信息区域</text>
+      <!-- <text class="address-empty-text">收货信息区域</text> -->
+    </view>
+
+
+    <!-- 存在地址是的样式 -->
+    <!-- 地址内容 -->
+    <view class="address-info-container" wx:if="{{id}}">
+      <view class="address-name-phone-container">
+        <text class="address-info-name">收货人姓名：{{receiver_name}}</text>
+        <text class="address-info-phone">联系方式：{{receiver_phone}}</text>
+        <!-- 图标 -->
+        <image class='address_icon' src='/images/car/position-icon@2x.png'></image>        
+      </view>
+      <view class="address-detail-container">
+        <text class="address-info-detail">收货地址：</text>
+        <text class='address-data'>{{province+city+county+address}}</text>
+      </view>
+    </view>
+
+    <!--右侧图标-->
+    <!-- <image class="icon-middle" src="/images/icons/more.png" /> -->
+  </view>
+</template>

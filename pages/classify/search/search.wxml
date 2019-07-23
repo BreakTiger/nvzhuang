@@ -1,0 +1,40 @@
+<!-- 搜索页面 -->
+
+<!-- 触发时间：点击搜索框 -->
+
+<!-- 整体盒子 -->
+<view class='search_container'>
+
+  <!-- 搜索框 -->
+  <!-- 头部盒子 横向排布-->
+  <form report-submit='true' bindsubmit='onSearchTap'>
+    <view class='header'>
+      <!-- 搜索容器：加上背景色的框 横向排布 -->
+
+      <view class='search_box'>
+        <!-- 图标 -->
+        <view class='icon'>
+          <image src='/images/shop/search@2x.png'></image>
+        </view>
+        <!-- 输入框 -->
+        <input name="keyword" placeholder='请输入搜索内容'></input>
+      </view>
+      <button class='s_btn' form-type='submit'>搜索</button>
+
+    </view>
+  </form>
+  <!-- 热门搜索 -->
+  <view class='hot_search'>
+
+    <!-- 标题  -->
+    <text class='title'>热门搜索</text>
+    <!-- 标签 -->
+    <view class='lable_container'>
+      <block wx:for="{{lables}}" wx:key="unique">
+        <view class='lable' data-keyword="{{item}}" catchtap='onLableTap'>{{item}}</view>
+      </block>
+    </view>
+
+  </view>
+
+</view>

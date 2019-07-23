@@ -1,0 +1,44 @@
+<import src="/templates/toptips/index.wxml" />
+
+<!--申请退款页面-->
+<view class="container">
+
+    <view class="zan-panel">
+        <!--基本信息-->
+        <view class="zan-cell">
+            <view class="zan-cell__bd">订单号：</view>
+            <view class="zan-cell__ft">{{refund.order_sn}}</view>
+        </view>
+        <view class="zan-cell">
+            <view class="zan-cell__bd">退款金额：</view>
+            <view class="zan-cell__ft">￥{{refund.order_amount}}</view>
+        </view>
+    </view>
+
+    <!--填写内容-->
+    <view class="refund-form-container zan-form">
+        <view class="zan-cell zan-form__item ">
+            <view class="zan-form__title">退款原因：</view>
+            <view class="zan-form__input zan-cell__bd">
+                <picker id="cause" mode="selector" range="{{ reason }}" value="{{ reasonIndex }}" bindchange="onReasonChange">
+                    {{ reason[reasonIndex] ? reason[reasonIndex] : '请选择退款原因' }}
+                </picker>
+            </view>
+        </view>        
+    </view>
+
+    <!--操作底栏-->
+    <view class="refund-action-bar">
+        <navigator class="refund-action" open-type="navigateBack">
+            <text>取消</text>
+        </navigator>
+
+        <view class="refund-action-primary" catchtap="onSubmitTap">
+            <text>提交申请</text>
+        </view>
+    </view>
+
+    <!--提示框-->
+    <template is="zan-toptips" data="{{ zanTopTips }}"></template>
+
+</view>

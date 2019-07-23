@@ -1,0 +1,28 @@
+<!--商品详情页面-->
+<!--依赖模板：商品信息、商品详情、商店详情、购买条， 购买面板-->
+
+<!--商品信息模板-->
+<import src="/templates/goods/info/goods-info-template.wxml" />
+<!--商品详情模板-->
+<import src="/templates/goods/detail/goods-detail-template.wxml" />
+<!-- 底部购买导航条-->
+<import src="/templates/goods/buy-bar/goods-buy-bar-template.wxml" />
+<!-- 用户评价 -->
+<!-- <import src="/templates/goods/score/goods-score-template.wxml" /> -->
+<!-- 购买面板 -->
+<import src="/templates/goods/buy-panel/goods-buy-panel-template.wxml" />
+
+<view class="goods-index-container" wx:if="{{init}}">
+  <!--基本信息-->
+  <!-- 轮播图+宝贝详情：如价格，名字，运费等 -->
+  <template is="goodsInfoTemplate" data="{{...goods,swiperCurrent, sku}}" />
+  <!--详情信息-->
+  <template is="goodsDetailTemplate" data="{{details : goods.goods_weapp_body}}" />
+  <!-- 以下三个模版是底部的 -->
+  <!--购买栏-->
+  <template is="goodsBuyBarTemplate" data="{{...goods, cartNum, isFav, status}}" />
+  <!--底栏占位-->
+  <view class="goods-index-footer"></view>
+  <!--购买面板-->
+  <template is="goodsBuyPanelTemplate" data="{{...goods, sku, status}}" />
+</view>

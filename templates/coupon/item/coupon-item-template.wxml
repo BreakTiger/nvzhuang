@@ -1,0 +1,38 @@
+<!-- 优惠券项目-->
+<!--依赖：无-->
+<template name="couponItemTemplate">
+    <view class="coupon-item-container {{status == 0 ? '' : 'coupon-item-disable'}}" data-coupon-id="{{id}}" catchtap="onCouponTap" catchlongtap="onCouponDelete">
+        <!--左侧区域-->
+        <view class="coupon-main-container">
+            <view class="coupon-value-container">
+                <text class="coupon-value-unit">￥</text>
+                <text class="coupon-value-text">{{amount}}</text>
+            </view>
+            <text class="coupon-limit-text">满{{minimum_amount}}元可用</text>
+        </view>
+
+        <!--右侧区域-->
+        <view class="coupon-info-container">
+            <view>
+                <view class="coupon-title-container">
+                    <view class="zan-label zan-label--primary zan-label--small">现金</view>
+                    <text class="coupon-title-text">{{title}}</text>
+                </view>
+                <text class="coupon-time-text" wx:if="{{start_time}}">{{start_time}}-{{end_time}}</text>
+            </view>
+
+            <!--分隔符-->
+            
+            <view>
+                <view class="coupon-desc-gap"></view>
+                <view class="coupon-detial-container">                    
+                    <text class="coupon-detial-text">领取时间：{{created_at}}</text>
+                </view>
+            </view>
+        </view>
+
+        <!-- 修饰图片 -->
+        <image class="coupon-new-icon" wx:if="{{status == 0}}" src="/images/icons/new.png" />
+        <image class="coupon-used-icon" wx:if="{{status == 1}}" src="/images/icons/used.png" />
+    </view>
+</template>

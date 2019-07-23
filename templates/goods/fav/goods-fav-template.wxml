@@ -1,0 +1,22 @@
+<!--收藏项目模板-->
+<!--依赖：无-->
+<!--输入：...goods -->
+<template name="goodsFavTemplate">
+  <view class="goods-fav-container" data-goods-id="{{fav_id}}" catchtap="onGoodsTap">
+    
+    <!--商品图片-->
+    <image class="goods-item-img" src="{{goods_image}}" />
+
+    <!--商品信息-->
+    <text class="goods-name">{{goods_name}}</text>
+    <text class="goods-price">￥{{goods_price}}</text>
+    <!-- <view class="goods-info-container">
+      <text class="goods-name">{{goods_name}}</text>
+      <text class="goods-price">￥{{goods_price}}</text>
+    </view> -->
+
+    <!--操作按钮-->
+    <!-- <image class="goods-more-img" src="/images/icons/more-dot.png"  data-goods-id="{{fav_id}}" catchtap="onMoreTap" /> -->
+  </view>
+  <!-- <view class="goods-item-border"></view> -->
+</template>

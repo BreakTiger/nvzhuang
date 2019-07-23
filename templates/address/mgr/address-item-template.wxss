@@ -1,0 +1,89 @@
+
+/*父窗口*/
+.address-item-container{
+    width: 702rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 20rpx;
+}
+
+/*管理按钮容器*/
+.address-mgr-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25rpx;
+    border-top: 1px solid #EAEAEA;
+}
+
+/*操作容器*/
+.address-opt-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    margin-left: 545rpx;
+    
+}
+/*操作图片*/
+.address-opt-container image{
+    height: 29rpx;
+    width: 29rpx;
+    margin-left: 25rpx;
+}
+/*操作文本*/
+.address-mgr-container text{
+    color: #0A0A0D;
+    font-size: 28rpx;
+    margin-left: 13rpx;
+}
+
+
+/*信息容器*/
+.address-info-container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 25rpx;
+    padding-right: 25rpx;
+}
+/*容器*/
+.address-name-phone-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rpx;
+}
+/*姓名*/
+.address-info-name{
+    color: #666666;
+    font-size: 28rpx;
+    /* font-family: '苹方-简'; */
+}
+/*电话*/
+.address-info-phone{
+    font-size: 28rpx;
+    color: #666666;
+}
+
+/*
+* 地址详情
+*/
+.address-info-detail{
+    color: #666666;
+    font-size: 28rpx;
+    margin-right: 25rpx;
+}
+
+
+
+/*地址容器*/
+.address-detail-container{
+    margin-top: 20rpx;
+    margin-bottom: 50rpx;
+}
+
+

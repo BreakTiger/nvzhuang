@@ -1,0 +1,56 @@
+<!--商品信息模板-->
+<!--依赖：无-->
+<!--输入：...goods-->
+<!-- 假数据引入：Info -->
+
+<template name="goodsInfoTemplate">
+
+  <!-- 容器盒子 -->
+  <view class="goods-info-conatiner">
+
+    <!-- 轮播图 -->
+    <swiper class='goods-swiper' autoplay="true" interval="5000" bindchange='changDot' catchtap="preview">
+      <swiper-item wx:for='{{slide_goods_image}}' wx:key='id'>
+        <image src='{{item.goods_image}}' mode='aspectFill'></image>
+      </swiper-item>
+    </swiper>
+
+    <!-- 指示点 -->
+    
+    <view class="dots">
+      <block wx:for="{{slide_goods_image}}" wx:key="unique">
+        <view class="dot {{index == swiperCurrent?'actives':''}}"></view>
+      </block>
+    </view>
+
+
+    <!-- 详情框 -->
+    <!--含有: 价格+商品名+销量+运费 -->
+    <view class='info-box'>
+      <!-- 价格+商品名 -->
+      <text class='price'>￥{{price}}</text>
+      <text class='name'>{{goods_name}}</text>
+
+      <view class='number-cust'>
+        <!-- 销量 -->
+        <view class='goods1'>
+          <text class='xiaoliang'>销量</text>
+          <text class='number'>{{salenum}}</text>
+        </view>
+
+        <!-- 运费 -->
+        <view class='goods2' wx:if="{{store.free_limit_amount==0}}">
+          <text class='yunfei'>免邮</text>
+          <text class='number'></text>
+        </view>
+         <view class='goods2' wx:if="{{store.free_limit_amount > 0}}">
+          <text class='yunfei'>满{{store.free_limit_amount}}元免邮</text>
+          <text class='number'></text>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+</template>

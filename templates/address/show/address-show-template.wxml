@@ -1,0 +1,20 @@
+<!-- 地址项目模板-->
+<!--依赖：无-->
+<template name="addressItemTemplate">
+    <view class="address-item-container">
+        <!--左侧图标-->
+        <!-- <view class="address-icon-container">
+            <image class="icon-middle" src="/images/icons/address.png"/>
+        </view> -->
+        <!-- 地址内容 -->
+        <view class="address-info-container">
+            <view class="address-name-phone-container">
+                <text class="address-info-name">收货人姓名：{{receiver_name}}</text>
+                <text class="address-info-phone">联系方式：{{receiver_phone}}</text>
+            </view>
+            <view class="address-detail-container">
+                <text class="address-info-detail">收货地址：{{province}}{{city}}{{county}}{{address}}</text>
+            </view>
+        </view>
+    </view>
+</template>

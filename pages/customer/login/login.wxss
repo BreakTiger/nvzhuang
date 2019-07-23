@@ -1,0 +1,72 @@
+/* 整体盒子 */
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 图片 */
+
+.user-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 210rpx;
+}
+
+/* 店名 */
+
+.user-nickname {
+  font-size: 40rpx;
+  color: #666;
+  margin-top: 56rpx;
+  margin-bottom: 52rpx;
+}
+
+/* 简介 */
+
+.user-desc {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 68rpx;
+}
+
+/* 按钮1 */
+
+.tologin {
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #f5c144;
+  border-radius: 35rpx;
+  margin-bottom: 36rpx;
+  font-size: 40rpx;
+}
+
+/* 按钮2 */
+
+.toreturn {
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  color: #f5c144;
+  border: 1rpx solid #f5c144;
+  border-radius: 35rpx;
+  margin-bottom: 110rpx;
+  font-size: 40rpx;
+}
+
+/* 技术提供者信息 */
+
+.t_provider {
+  position: absolute;
+  bottom: 0rpx;
+  left: 268rpx;
+  margin-bottom: 36rpx;
+  font-size: 14rpx;
+  color: #666;
+}

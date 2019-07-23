@@ -1,0 +1,53 @@
+.coupon-pick-container{
+    display: flex;
+    flex-direction: row;
+    height: 170rpx;
+}
+.coupon-pick-container text{
+    color: #FFF;
+}
+.coupon-value-unit{
+    font-size: 32rpx;
+}
+.coupon-value-text{
+    font-size: 65rpx;
+}
+.coupon-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #49a9ee;
+    width:320rpx;
+    padding:10rpx 20rpx 20rpx 10rpx;
+}
+
+.coupon-value-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.coupon-pick-bar{
+    background-color: #0e77ca;
+}
+.coupon-time-text{
+    font-size: 22rpx;
+    margin-top: 10rpx;
+}
+.coupon-limit-text{
+    font-size: 22rpx;
+}
+.coupon-time-wrap{
+    text-align: right;
+}
+.coupon-pick-bar{
+    width: 50rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.coupon-pick-bar text{
+    font-size: 28rpx;
+    margin:10rpx 0;
+}

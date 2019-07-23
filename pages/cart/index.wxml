@@ -1,0 +1,89 @@
+<!--购物车列表页面-->
+<!--依赖模板：购物车项目-->
+
+<import src="/templates/cart/item/cart-item-template.wxml" />
+
+
+<view class="container" wx:if="{{init}}">
+
+  <!--占位提示-->
+  <!-- 购物车为空时，显示的内容 -->
+  <view class="cart-empty-tips" wx:if="{{cart.carts.length == 0}}">
+
+    <!-- 图片 -->
+    <view class='emptyimg'>
+      <image src="/images/car/cart-icon@2x.png" />
+    </view>
+
+    <!-- 提示信息 -->
+    <view class='hint'>
+      <!-- 带图行 -->
+      <view class='line1'>
+        <!-- 图片 -->
+        <view class='lineimg1'>
+          <image src='/images/car/face@2x.png'></image>
+        </view>
+        <!-- 文字 -->
+        <text>会有那么一天</text>
+      </view>
+
+      <text>你会脱掉你爱的帆布鞋</text>
+      <text>穿上漂亮的高跟鞋</text>
+      <text>优雅的走在路上</text>
+      <text>你会盘起发髻</text>
+      <text>梳上刘海画着精致的妆容</text>
+
+      <!-- 带图行 -->
+      <view class='line2'>
+        <!-- 文字 -->
+        <text>徘徊在各种社交场合</text>
+        <!-- 图片 -->
+        <view class='lineimg2'>
+          <image src='/images/car/face@2x.png'></image>
+        </view>
+      </view>
+
+
+    </view>
+
+  </view>
+
+  <!-- 颜色圆角栏 购物车为空时，不显示 -->
+  <!-- <view class='BCV' ></view> -->
+  <view class='BCV' wx:if="{{cart.carts.length>0}}"></view>
+
+
+  <!--购物车内容-->
+  <!-- 容器 -->
+  <view class="item-list-container">
+
+    <block wx:for="{{cart.carts}}" wx:key="cart_id">
+      <template is="cartItemTemplate" data="{{...item, index}}" />
+    </block>
+
+  </view>
+
+  <!--底栏-->
+  <view class="cart-bar-container" wx:if="{{cart.carts.length>0}}">
+    <view class="cart-check-all-container" catchtap="onCheckAllTap">
+      <view class="zan-icon zan-icon-{{cart.all ? 'checked' : 'check'}}" />
+      <text class='choice-text'>全选</text>
+    </view>
+
+    <!-- 合计运费 -->
+    <view class="cart-check-info-container">
+      <!-- 合计 -->
+      <view class="cart-check-price-container">
+        <text>合计：</text>
+        <text class="goods-price">￥{{cart.price}}</text>
+      </view>
+      <!-- 运费提示 -->
+      <!-- <text class="cart-check-tips-text">（运费另算￥{{}}）</text>  -->
+    </view>
+
+    <view class="bar-buy-container {{cart.buy ? '' : 'bar-buy-empty'}}" catchtap="onBuyTap">
+      <text class="text-btn">结算（{{cart.num}}）</text>
+    </view>
+  </view>
+
+</view>

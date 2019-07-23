@@ -1,0 +1,14 @@
+@import "/templates/coupon/pick-simple/coupon-pick-template.wxss";
+
+.coupon-shelf-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: scroll;
+    white-space: nowrap;
+    margin-bottom: 5rpx;
+    margin-top: 5rpx;
+    margin-left: 5rpx;
+    white-space: nowrap;
+    background-color: #FFF;
+}

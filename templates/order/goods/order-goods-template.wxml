@@ -1,0 +1,24 @@
+<!--订单商品模板 -->
+<!--依赖：无-->
+<!--输入：...goods-->
+<template name="orderGoodsTemplate">
+  <view class="order-goods-container">
+    <!--商品图片-->
+    <image class="order-goods-image" src="{{goods_image}}" />
+
+    <!--商品说明-->
+    <view class="order-goods-title-container">
+      <text class="order-goods-title">{{goods_name}}</text>
+
+      <!-- 颜色和尺码 -->
+      <view class='color-sku'>
+        <text class='color-text' wx:for="{{goods_spec}}" wx:for-item="spec" wx:key="unique">{{spec}}</text>
+      </view>
+      <!--商品购买信息-->
+      <view class="order-goods-buy-container">
+        <text class="order-goods-price">￥{{goods_price}}</text>
+        <text class="order-goods-count">x{{goods_num}}</text>
+      </view>
+    </view>
+  </view>
+</template>

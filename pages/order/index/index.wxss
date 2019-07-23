@@ -1,0 +1,55 @@
+@import "/templates/order/list/order-list-template.wxss";
+@import "/templates/order/tab/order-tab-template.wxss";
+
+page{
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.order-index-container{
+
+}
+
+
+/*占位*/
+.order-empty-tips{
+    position: fixed;
+    top: 300rpx;
+    width: 100%;
+    height: 300rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.order-empty-tips image{
+    width:100rpx;
+    height: 100rpx;
+}
+.order-empty-tips text{
+    color: #656565;
+    font-size: 40rpx;
+    margin-left: 30rpx;
+}
+
+
+.order-tab-wrap{
+    position: fixed;
+    top: 0;
+}
+.order-tab-container{
+    width: 750rpx;
+}
+
+.order-list-wrap{
+    margin-top: 87rpx;
+}
+
+/*底部边线*/
+.footer-line{
+    position: fixed;
+    height: 1px;
+    width: 100%;
+    background-color: #E6E8EB;
+    bottom: 0px;
+}

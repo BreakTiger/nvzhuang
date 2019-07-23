@@ -1,0 +1,101 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.98",
+	"appid": "wx7083bbd8c115f074",
+	"projectname": "%E8%A3%95%E8%A4%A3%E6%9C%8D%E9%A5%B0",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/customer/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "退货",
+					"pathName": "pages/order/return-detail/return-detail",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "申请退款",
+					"pathName": "pages/refund/apply/apply",
+					"query": "orderId=4"
+				},
+				{
+					"id": -1,
+					"name": "退货详情",
+					"pathName": "pages/order/return-goods/return-goods",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "商城",
+					"pathName": "pages/classify/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sousuo",
+					"pathName": "pages/classify/search/search",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "商品详情",
+					"pathName": "pages/goods/index/index",
+					"query": "goods_id=1"
+				},
+				{
+					"id": 7,
+					"name": "订单详情",
+					"pathName": "pages/order/detail/detail",
+					"query": "orderId=4"
+				},
+				{
+					"id": -1,
+					"name": "订单支付",
+					"pathName": "pages/order/trade/trade",
+					"query": "trade={\"dealPrice\":\"130.00\",\"finalPrice\":\"130.00\",\"paymentType\":\"1\",\"paymentText\":\"微信支付\",\"orderGoodsList\":[{\"id\":1,\"store_id\":1,\"store_name\":\"中纺女装\",\"buyer_id\":1,\"goods_id\":16,\"sku_id\":383,\"goods_name\":\"百搭潮流简约个性时尚2018年夏季\",\"goods_price\":\"65.00\",\"goods_num\":2,\"goods_image\":\"http://img.hznzcn.com/images/goods_new/20180504/20180504103629048.jpg\",\"goods_spec\":{\"3\":\"蓝色\",\"6\":\"L\"},\"created_at\":\"2018-05-31 10:18:41\",\"updated_at\":\"2018-05-31 10:19:06\",\"check\":true}]}"
+				},
+				{
+					"id": 9,
+					"name": "地址",
+					"pathName": "pages/address/edit/edit",
+					"query": "addr={\"id\":1,\"buyer_id\":1,\"receiver_name\":\"马文培\",\"receiver_phone\":\"18658179152\",\"province_id\":null,\"province\":\"浙江省\",\"city_id\":null,\"city\":\"杭州市\",\"county_id\":null,\"county\":\"江干区\",\"address\":\"东方电商商务园17幢402室\",\"is_default\":1,\"created_at\":null,\"updated_at\":null}"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<!-- 规格选择器模板 -->
+<!--输入：...sku-->
+<!--依赖：无-->
+<template name="goodsScoreTemplate">
+     <!-- 规格选择器 -->
+        <view class="zan-cell zan-cell--access" catchtap="onScoreTap">
+            <view class="zan-cell__bd">
+                <text class="socre-text" wx:if="{{commentNum > 0}}">共 {{commentNum}} 条用户评价</text>
+                <text class="socre-text" wx:else>该商品暂无评价</text>
+            </view>
+            <view class="zan-cell__ft"> </view>
+        </view>
+</template>

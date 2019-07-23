@@ -1,0 +1,56 @@
+<!--输入：...goods-->
+<!--依赖：无-->
+<!-- 页面底部的购买导航栏 -->
+<!-- 作用：购物车，客服，收藏，加入购物车，立即购买 -->
+
+<template name="goodsBuyBarTemplate">
+
+  <!-- 盒子 -->
+  <view class="buy-bar-container">
+
+    <!-- 购物车 -->
+    <view class="bar-action-container" catchtap="onToCartTap">
+      <view class="zan-badge">
+        <image class="icon-middle" src="/images/home/cart@2x.png" />
+        <!-- <view class="zan-badge__count">{{cartNum}}</view> -->
+      </view>
+      <text>购物车</text>
+    </view>
+
+    <!-- 客服 -->
+    
+    <button open-type='contact' class='bar-action-container btn-kefu'>
+      <view class='zan-badge'>
+        <image class='icon-middle1' src='/images/home/kefu-icon@2x.png'></image>
+      </view>
+      <text>客服</text>
+    </button>
+
+    <!-- 收藏 -->
+    <view class="bar-action-container" data-fav='{{isFav}}' catchtap="onLikeTap">
+      <image class="icon-middle" src="/images/home/fav{{isFav?'':'-icon'}}@2x.png" />
+      <text>{{isFav ? '已收藏': '收藏' }}</text>
+    </view>
+
+
+    <block wx:if="{{status}}">
+
+      <!-- 加入购物车 -->
+      <view class="bar-cart-container" catchtap="onAddCartTap">
+        <text>加入购物车</text>
+      </view>
+
+      <!-- 立即购买 -->
+      <view class="bar-buy-container" catchtap="onBuyTap">
+        <text>立即购买</text>
+      </view>
+    </block>
+
+    <block wx:else>
+      <view class="bar-close-container" catchtap="onCloseTap">
+        <text>未营业</text>
+      </view>
+    </block>
+
+  </view>
+</template>

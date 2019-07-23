@@ -1,0 +1,233 @@
+/* 首页盒子 */
+@import "/templates/loadmore/index.wxss";
+.container {
+  /* width: 750rpx;
+  height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f3f2;
+}
+
+/* 轮播图图片尺寸 */
+
+.home-swiper {
+  width: 750rpx;
+  height: 605rpx;
+}
+
+.home-swiper image {
+  width: 750rpx;
+  height: 605rpx;
+}
+
+/* 指示点 */
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 410rpx;
+  left: 552rpx;
+  width: 200rpx;
+  height: 50rpx;
+}
+
+.dots .dot {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #333;
+  margin-left: 12rpx;
+  border-radius: 20rpx;
+  transform: all 0.6;
+  opacity: 0.44;
+}
+
+/* 追加的指示点css样式 */
+
+.dots .actives {
+  background-color: #333;
+  opacity: 1;
+}
+
+/* 店标+店铺简介 */
+
+/* 盒子 */
+
+.banner-info-box {
+  width: 702rpx;
+  height: 245rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.15);
+  margin-bottom: 30rpx;
+  position: absolute;
+  top: 462rpx;
+}
+
+/* 小盒子 */
+
+.bannner-name {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: -74rpx;
+  left: 20rpx;
+}
+
+/* 图片 */
+
+.banner {
+  width: 142rpx;
+  height: 142rpx;
+  margin-right: 30rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 名字 */
+
+.name {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 数量 */
+
+.number-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25rpx;
+  margin-left: 200rpx;
+}
+
+.goods1 {
+  margin-right: 130rpx;
+}
+
+.shopname {
+  margin-right: 27rpx;
+}
+
+.goods1 text {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.goods2 text {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.shopInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 26rpx;
+  margin-top: 24rpx;
+}
+
+.Info1 {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 21rpx;
+  font-weight: bold;
+}
+
+.Info2 {
+  width: 650rpx;
+  height: 24rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 全部产品 */
+
+.all_products {
+  width: 702rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 3rpx 7rpx 0rpx rgba(6, 0, 1, 0.15);
+  margin-top: 120rpx;
+}
+
+/* 标题盒子 */
+
+.products-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+  margin-left: 20rpx;
+}
+
+/* 色标 */
+
+.port {
+  width: 10rpx;
+  height: 34rpx;
+  background-color: #fadd98;
+  border-radius: 3px;
+  margin-right: 28rpx;
+}
+
+/* 标题 */
+
+.title1 {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-right: 28rpx;
+}
+
+.title2 {
+  font-size: 25rpx;
+}
+
+/* 商品列表布局 */
+
+.content-box {
+  width: 702rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 商品详情框 */
+
+.products_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-bottom: 54rpx;
+}
+
+/* 商品图片 */
+
+.content_img {
+  width: 321rpx;
+  height: 428rpx;
+}
+
+.content_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+/* 商品名字 */
+
+.produc_name {
+  width: 211rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

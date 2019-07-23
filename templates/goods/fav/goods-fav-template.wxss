@@ -1,0 +1,56 @@
+/*基本容器*/
+
+.goods-fav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 22rpx;
+  margin-bottom: 41rpx;
+}
+
+/*商品图片*/
+
+.goods-item-img {
+  width: 320rpx;
+  height: 426rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/*商品名称*/
+
+.goods-name {
+  color: #666;
+  font-size: 30rpx;
+  width: 200rpx;
+  line-height: 30rpx;
+  height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 22rpx;
+}
+
+/*商品价格*/
+
+.goods-price {
+  font-size: 30rpx;
+  color: #ef9ba8;
+}
+
+/*加入购物车图片*/
+
+.goods-more-img {
+  height: 45rpx;
+  width: 45rpx;
+}
+
+/*分隔符*/
+
+/* 
+.goods-item-border {
+  height: 1px;
+  background-color: #f3f3f3;
+  width: 725rpx;
+  margin-left: 25rpx;
+} */
